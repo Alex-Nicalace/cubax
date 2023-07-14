@@ -1,0 +1,75 @@
+.menu {
+   @media (max-width: $mobile) {
+      .menu-open &::before {
+         content: "";
+         position: fixed;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         background-color: $color-main;
+         opacity: 0.5;
+         // z-index: 1;
+      }
+   }
+   // .menu__icon
+   &__icon {
+   }
+   // .menu__body
+   &__body {
+      @media (max-width: $mobile) {
+         padding: rem(98) rem(15) rem(27);
+         position: fixed;
+         width: 100%;
+         // height: 100%;
+         overflow: auto;
+         top: 0;
+         left: -100%;
+         background-color: $color-white;
+         transition: all 0.3s ease 0s;
+         text-align: center;
+         // z-index: 2;
+
+         .menu-open & {
+            left: 0;
+         }
+      }
+   }
+   // .menu__list
+   &__list {
+      display: grid;
+      grid-auto-flow: column;
+      // column-gap: rem(56);
+      @include adaptiveValue("column-gap", 56, 15, $containerWidth, 992, 1);
+      @media (max-width: $mobile) {
+         grid-auto-flow: row;
+         justify-items: center;
+         gap: rem(42) 0;
+         padding-bottom: rem(46);
+         border-bottom: rem(1) solid $color-gray-light;
+      }
+   }
+   // .menu__item
+   &__item {
+   }
+   // .menu__link
+   &__link {
+      @extend %base-bold;
+      color: $color-gray;
+      text-transform: uppercase;
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: $color-main;
+         }
+      }
+   }
+   &__tel {
+      display: none;
+      margin-top: rem(21);
+      text-align: center;
+      @media (max-width: $mobile) {
+         display: inline-grid;
+      }
+   }
+}

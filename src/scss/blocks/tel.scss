@@ -1,0 +1,15 @@
+.tel {
+   display: grid;
+   grid-auto-flow: column;
+   align-items: center;
+   column-gap: rem(11);
+   // .tel__icon
+   &__icon {
+      width: rem(22);
+      height: rem(22);
+   }
+   // .tel__number
+   &__number {
+      @extend %base-bold;
+   }
+}

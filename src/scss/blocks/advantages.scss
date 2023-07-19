@@ -1,0 +1,27 @@
+.advantages {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: rem(20);
+   // .advantages__item
+   &__item {
+      flex: 0 0 rem(263);
+      // flex: 0 0 percent(263, 1678);
+      padding: rem(41) rem(44) rem(32) rem(32);
+      // display: grid;
+      // row-gap: rem(20);
+
+      border-radius: rem(30);
+      background-color: $color-white;
+   }
+   // .advantages__icon
+   &__icon {
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+      }
+   }
+   // .advantages__title
+   &__title {
+      @extend %small;
+   }
+}

@@ -1,0 +1,41 @@
+.scroll {
+   width: rem(45);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: $color-slate-gray;
+   gap: rem(21);
+   // .scroll__wrap-icon
+   &__wrap-icon {
+      width: rem(45);
+      height: rem(45);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: 2;
+      border: rem(1) solid currentColor;
+      border-radius: 50%;
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         width: rem(1);
+         height: rem(20);
+         bottom: rem(38);
+         left: 50%;
+         background-color: currentColor;
+      }
+   }
+   // .scroll__icon
+   &__icon {
+      width: rem(13);
+      height: rem(19);
+      fill: currentColor;
+   }
+   // .scroll__label
+   &__label {
+      order: 1;
+      writing-mode: vertical-lr;
+      transform: rotate(-180deg);
+   }
+}

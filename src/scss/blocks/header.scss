@@ -1,4 +1,9 @@
 .header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1;
 	@include adaptiveValue("padding-top", 46, 19);
 	// .header__container
 	&__container {

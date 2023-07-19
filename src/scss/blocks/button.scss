@@ -1,0 +1,8 @@
+.button {
+   display: inline-block;
+   padding: rem(23) rem(39);
+   border-radius: rem(35);
+   color: $color-white;
+   background-color: $color-razzmatazz;
+   @extend %base-bold;
+}

@@ -26,6 +26,9 @@
       &_wide {
          max-width: rem(1678);
       }
+      & > * {
+         z-index: 1;
+      }
    }
    &__wrap {
    }
@@ -57,5 +60,27 @@
       @media (min-width: em(1700)) {
          margin: 0 rem(-78);
       }
+   }
+   // .promo__pic
+   &__pic {
+      // width: rem(752);
+      top: percent(282, 1080);
+      left: percent(332+15, 1552);
+      padding-top: percent(542, 1552);
+      padding-left: percent(752, 1552);
+   }
+}
+
+.pic {
+   position: absolute;
+   z-index: auto;
+   // .pic__main
+   &__main {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
    }
 }

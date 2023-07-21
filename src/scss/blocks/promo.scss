@@ -57,15 +57,32 @@
    }
    &__build-block {
       position: absolute;
-      // width: 100%;
-      height: percent(542, 383);
-      aspect-ratio: 752 / 542;
-      top: percent(-60, 383);
-      // top: 50%;
-      // left: percent(332, 1522);
-      left: 43%;
-      transform: translate(-43%, 0);
+      &_center {
+         // width: 100%;
+         height: percent(542, 383);
+         aspect-ratio: 752 / 542;
+         top: percent(-60, 383);
+         // top: 50%;
+         // left: percent(332, 1522);
+         left: 43%;
+         transform: translate(-43%, 0);
+         z-index: 1;
+      }
+      &_left {
+         height: percent(269, 383);
+         aspect-ratio: 373 / 269;
+         top: percent(20, 383);
+         left: percent(62, 1522);
+      }
+      &_right {
+         height: percent(523, 383);
+         aspect-ratio: 726 / 523;
+         top: percent(58, 383);
+         left: percent(931, 1522);
+         z-index: 1;
+      }
    }
+
    &__build-img {
       position: absolute;
       width: 100%;
@@ -82,7 +99,7 @@
          animation: clouds 24s linear alternate infinite;
       }
       &:nth-child(3n + 2) {
-         animation: clouds 32s linear alternate infinite;
+         animation: clouds 32s linear alternate-reverse infinite;
       }
       &:nth-child(3n + 3) {
          animation: clouds 40s linear alternate infinite;
@@ -150,6 +167,54 @@
       &_12 {
          left: percent(322, 752);
          top: percent(373, 542);
+      }
+      &_13 {
+         left: percent(2, 373);
+         top: percent(180, 269);
+      }
+      &_14 {
+         left: percent(2, 373);
+         top: percent(180, 269);
+      }
+      &_15 {
+         left: percent(58, 373);
+         top: percent(180, 269);
+      }
+      &_16 {
+         left: percent(84, 373);
+         top: percent(180, 269);
+      }
+      &_17 {
+         left: percent(147, 373);
+         top: percent(180, 269);
+      }
+      &_18 {
+         left: percent(147, 373);
+         top: percent(180, 269);
+      }
+      &_19 {
+         left: percent(197, 373);
+         top: percent(180, 269);
+      }
+      &_20 {
+         left: percent(277, 373);
+         top: percent(180, 269);
+      }
+      &_21 {
+         left: percent(523, 726);
+         top: percent(324, 523);
+      }
+      &_22 {
+         left: percent(511, 726);
+         top: percent(343, 523);
+      }
+      &_23 {
+         left: percent(41, 373);
+         top: percent(180, 269);
+      }
+      &_24 {
+         left: percent(100, 373);
+         top: percent(217, 269);
       }
    }
    // .promo__leave-request

@@ -74,6 +74,84 @@
       left: 0;
       object-fit: contain;
    }
+   &__cloud {
+      position: absolute;
+      top: 0;
+      left: 0;
+      &:nth-child(3n + 1) {
+         animation: clouds 24s linear alternate infinite;
+      }
+      &:nth-child(3n + 2) {
+         animation: clouds 32s linear alternate infinite;
+      }
+      &:nth-child(3n + 3) {
+         animation: clouds 40s linear alternate infinite;
+      }
+      @keyframes clouds {
+         0% {
+            transform: translateX(-50%);
+            opacity: 0;
+         }
+         10% {
+            opacity: 1;
+         }
+         90% {
+            opacity: 1;
+         }
+         100% {
+            transform: translateX(50%);
+            opacity: 0;
+         }
+      }
+      &_1 {
+         left: percent(316, 752);
+         top: percent(360, 542);
+      }
+      &_2 {
+         left: percent(3, 752);
+         top: percent(359, 542);
+      }
+      &_3 {
+         left: percent(5, 752);
+         top: percent(360, 542);
+      }
+      &_4 {
+         left: percent(482, 752);
+         top: percent(374, 542);
+      }
+      &_5 {
+         left: percent(605, 752);
+         top: percent(379, 542);
+      }
+      &_7 {
+         left: percent(57, 752);
+         top: percent(384, 542);
+      }
+      &_6 {
+         left: percent(156, 752);
+         top: percent(374, 542);
+      }
+      &_8 {
+         left: percent(370, 752);
+         top: percent(373, 542);
+      }
+      &_9 {
+         left: percent(-183, 752);
+         top: percent(374, 542);
+      }
+      &_11 {
+         left: percent(670, 752);
+         top: percent(379, 542);
+      }
+      &_10 {
+         left: percent(752 + 84, 752);
+         top: percent(379, 542);
+      }
+      &_12 {
+         left: percent(322, 752);
+         top: percent(373, 542);
+      }
+   }
    // .promo__leave-request
    &__leave-request {
       // display: flex;

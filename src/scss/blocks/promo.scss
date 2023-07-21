@@ -15,7 +15,8 @@
    // .promo__container
    &__container {
       @include adaptiveValue("padding-top", 151, 118);
-      @include adaptiveValue("padding-bottom", 76, 83);
+      @include adaptiveValue("padding-bottom", 74, 83);
+      // padding-bottom: clamp(rem(74), vh(74, 1080), rem(83));
       position: relative;
 
       flex-grow: 1;
@@ -26,6 +27,12 @@
       &_wide {
          max-width: rem(1678);
       }
+      @media (min-width: $pc) and (max-height: em(1079)) {
+         padding-bottom: rem(40);
+      }
+      & > * {
+         z-index: 1;
+      }
    }
    &__wrap {
    }
@@ -34,16 +41,52 @@
       max-width: rem(1264);
       text-align: center;
    }
+   &__picture {
+      position: relative;
+      flex-grow: 1;
+      // height: rem(394); 309
+      // @include adaptiveValue("flex-basis", 375, 309);
+      flex-basis: percent(383, 929);
+      min-height: rem(309);
+      max-height: rem(383);
+      width: 100%;
+      @media (min-width: $pc) and (max-height: em(1079)) {
+         max-height: none;
+      }
+      z-index: auto;
+   }
+   &__build-block {
+      position: absolute;
+      // width: 100%;
+      height: percent(542, 383);
+      aspect-ratio: 752 / 542;
+      top: percent(-60, 383);
+      // top: 50%;
+      // left: percent(332, 1522);
+      left: 43%;
+      transform: translate(-43%, 0);
+   }
+   &__build-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+   }
    // .promo__leave-request
    &__leave-request {
-      flex-grow: 1;
-
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
+      // display: flex;
+      // justify-content: center;
+      // align-items: flex-end;
 
       &:not(:last-child) {
          margin-bottom: rem(55);
+         // margin-bottom: vh(50, 1080);
+         // margin-bottom: clamp(rem(10), vh(50, 1080), rem(55));
+         @media (min-width: $pc) and (max-height: em(1079)) {
+            margin-bottom: rem(20);
+         }
       }
    }
    // .promo__scroll
@@ -54,8 +97,14 @@
       transform: translateY(-50%);
    }
    &__advantages {
+      --card-advantage-w: #{rem(263)};
+      --card-advantage-pt: #{rem(35)};
+      --card-advantage-pl: #{rem(40)};
       @media (min-width: em(1700)) {
          margin: 0 rem(-78);
+      }
+      @media (min-width: $pc) and (max-height: em(1079)) {
+         --card-advantage-pt: #{rem(20)};
       }
    }
 }

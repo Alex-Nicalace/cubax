@@ -55,8 +55,10 @@
       }
       z-index: auto;
    }
+   // .promo__build-block
    &__build-block {
       position: absolute;
+      // .promo__build-block_center
       &_center {
          // width: 100%;
          height: percent(542, 383);
@@ -67,19 +69,32 @@
          left: 43%;
          transform: translate(-43%, 0);
          z-index: 1;
+         @media (max-width: $mobileSmall) {
+            height: percent(274, 309);
+            aspect-ratio: 381 / 274;
+            top: percent(34, 309);
+         }
       }
+      // .promo__build-block_left
       &_left {
          height: percent(269, 383);
          aspect-ratio: 373 / 269;
          top: percent(20, 383);
          left: percent(62, 1522);
       }
+      // .promo__build-block_right
       &_right {
          height: percent(523, 383);
          aspect-ratio: 726 / 523;
          top: percent(58, 383);
          left: percent(931, 1522);
          z-index: 1;
+      }
+      @media (max-width: $tablet) {
+         &_left,
+         &_right {
+            display: none;
+         }
       }
    }
 
@@ -232,6 +247,15 @@
          bottom: auto;
          top: percent(20, 383);
       }
+      @media (max-width: $mobileSmall) {
+         bottom: percent(236, 309);
+         right: percent(17, 330);
+         &_bloor {
+            right: percent(60, 330);
+            bottom: auto;
+            top: percent(62, 309);
+         }
+      }
    }
    // .promo__leave-request
    &__leave-request {
@@ -246,6 +270,9 @@
          @media (min-width: $pc) and (max-height: em(1079)) {
             margin-bottom: rem(20);
          }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(85);
+         }
       }
    }
    // .promo__scroll
@@ -254,6 +281,9 @@
       top: 50%;
       left: rem(15);
       transform: translateY(-50%);
+      @media (max-width: $mobile) {
+         display: none;
+      }
    }
    &__advantages {
       --card-advantage-w: #{rem(263)};
@@ -264,6 +294,12 @@
       }
       @media (min-width: $pc) and (max-height: em(1079)) {
          --card-advantage-pt: #{rem(20)};
+      }
+      @media (max-width: $mobile) {
+         --card-advantage-w: #{rem(149)};
+         --card-advantage-pt: #{rem(25)};
+         --card-advantage-pl: #{rem(20)};
+         --card-advantage-h: #{rem(160)};
       }
    }
 }

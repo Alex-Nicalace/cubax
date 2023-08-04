@@ -127,20 +127,20 @@
          animation: clouds 40s linear alternate infinite;
       }
       @keyframes clouds {
-         // 0% {
-         //    transform: translateX(-50%);
-         //    opacity: 0;
-         // }
-         // 10% {
-         //    opacity: 1;
-         // }
-         // 90% {
-         //    opacity: 1;
-         // }
-         // 100% {
-         //    transform: translateX(50%);
-         //    opacity: 0;
-         // }
+         0% {
+            transform: translateX(-50%);
+            opacity: 0;
+         }
+         10% {
+            opacity: 1;
+         }
+         90% {
+            opacity: 1;
+         }
+         100% {
+            transform: translateX(50%);
+            opacity: 0;
+         }
       }
       &_1 {
          left: percent(316, 752);
@@ -246,12 +246,22 @@
       aspect-ratio: 74/98;
       bottom: 100%;
       right: percent(129, 1522);
+      animation: balloon 3s ease-in-out infinite alternate;
+      @keyframes balloon {
+         0% {
+            transform: translateY(-10%);
+         }
+         100% {
+            transform: translateY(10%);
+         }
+      }
       &_bloor {
          width: percent(44, 1522);
          min-width: rem(21);
          right: percent(200, 1522);
          bottom: auto;
          top: percent(20, 383);
+         animation: balloon 3s ease-in-out infinite alternate-reverse;
       }
       @media (max-width: $mobileSmall) {
          bottom: percent(236, 309);
@@ -283,17 +293,33 @@
       }
    }
    &__advantages {
-      --card-advantage-w: #{rem(263)};
+      --card-advantage-container-m: #{percent(-10, 1678)};
+      --card-advantage-item-m: #{percent(10, 1698)};
+      --card-advantage-w: #{percent(263, 1698)};
       --card-advantage-pt: #{rem(35)};
       --card-advantage-pl: #{rem(40)};
       @media (min-width: em(1700)) {
          margin: 0 rem(-78);
+      }
+      @media (max-width: $pc) {
+         // --card-advantage-container-m: #{percent(-10, 1522)};
+         // --card-advantage-item-m: #{percent(10, 1542)};
+         // --card-advantage-w: #{percent(263, 1542)};
+      }
+      @media (max-width: $tablet) {
+         --card-advantage-container-m: #{rem(-10)};
+         --card-advantage-item-m: #{rem(10)};
+         --card-advantage-w: #{rem(263)};
       }
       @media (max-width: $mobile) {
          --card-advantage-w: #{rem(149)};
          --card-advantage-pt: #{rem(25)};
          --card-advantage-pl: #{rem(20)};
          --card-advantage-h: #{rem(160)};
+      }
+      @media (max-width: em(359)) {
+         --card-advantage-w: 100%;
+         --card-advantage-h: auto;
       }
    }
 }

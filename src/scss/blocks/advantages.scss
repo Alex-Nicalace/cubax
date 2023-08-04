@@ -2,9 +2,11 @@
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   gap: rem(20);
+   // gap: rem(20);
+   margin: var(--card-advantage-container-m, rem(-10));
    // .advantages__item
    &__item {
+      margin: var(--card-advantage-item-m, rem(10));
       height: var(--card-advantage-h, auto);
       flex: 0 0 var(--card-advantage-w, rem(263));
       // flex: 0 0 percent(263, 1678);

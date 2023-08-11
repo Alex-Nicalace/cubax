@@ -1,0 +1,44 @@
+input[type="checkbox"] {
+   & + label {
+      color: $color-blue-steel;
+      display: flex;
+      // align-items: center;
+      cursor: pointer;
+
+      span:nth-child(1) {
+         align-self: flex-start;
+         margin-right: rem(10);
+         width: rem(30);
+         height: rem(30);
+         flex: 0 0 rem(30);
+         border-radius: rem(10);
+         border: rem(1) solid $color-gray-light2;
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         svg {
+            stroke: $color-steel-blue;
+            opacity: 0;
+            transition: all 0.3s ease 0s;
+         }
+      }
+
+      span:nth-child(2) {
+         padding-top: rem(3);
+         color: $color-gray;
+         font-size: rem(12);
+         font-weight: 700;
+         line-height: 2;
+         letter-spacing: rem(0.48);
+      }
+   }
+   &:checked + label {
+      span:nth-child(1) {
+         svg {
+            opacity: 1;
+         }
+      }
+   }
+}

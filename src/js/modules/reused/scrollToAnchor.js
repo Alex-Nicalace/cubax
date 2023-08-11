@@ -52,25 +52,24 @@ anchors.forEach(function (item) {
    });
 }); */
 
-
 // вариант более современный
-import scrollSmooth from './scrollSmooth.js'
+import scrollSmooth from './scrollSmooth.js';
 const scrollToAnchor = () => {
-   const anchors = Array.from(document.querySelectorAll('a[href*="#"]'));
+  const anchors = Array.from(document.querySelectorAll('a[href*="#"]'));
 
-   anchors.forEach(function (item) {
-      // каждому якорю присваиваем обработчик события
-      item.addEventListener('click', function (e) {
-         // убираем стандартное поведение
-         e.preventDefault();
+  anchors.forEach(function (item) {
+    // каждому якорю присваиваем обработчик события
+    item.addEventListener('click', function (e) {
+      // убираем стандартное поведение
+      e.preventDefault();
 
-         // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
-         const hash = this.hash;
-         if (!hash) return;
-         scrollSmooth(hash, { duration: 1000 });
-         location.hash = hash;
-      });
-   });
-}
+      // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
+      const hash = this.hash;
+      if (!hash) return;
+      scrollSmooth(hash, { duration: 1000 });
+      location.hash = hash;
+    });
+  });
+};
 
 export default scrollToAnchor;

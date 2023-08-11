@@ -12,6 +12,10 @@
    // .feedback__wrap
    &__wrap {
       display: flex;
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         align-items: center;
+      }
    }
    // .feedback__contacts
    &__contacts {
@@ -21,8 +25,10 @@
       flex: 0 0 percent(425, 1522);
 
       color: $color-white;
-      // background-color: $color-blue-steel;
 
+      @media (max-width: $tablet) {
+         padding: rem(35) rem(40) rem(20);
+      }
       & > * {
          position: relative;
          z-index: 1;
@@ -32,11 +38,14 @@
       &::after {
          content: "";
          position: absolute;
-         width: 120%;
+         width: 130%;
          top: 0;
          left: 0;
          background-color: $color-steel-blue;
          z-index: 0;
+         @media (max-width: $tablet) {
+            width: 100%;
+         }
       }
       &::before {
          height: 100%;
@@ -46,12 +55,21 @@
          // box-shadow:
          //    inset 0 0 0 13px $color-steel-blue,
          //    inset 0 0 0 14px $color-white;
+         @media (max-width: $tablet) {
+            height: 140%;
+            border-radius: rem(30) rem(30) 0 0;
+         }
       }
       &::after {
          height: percent(256, 281);
          top: rem(13);
          left: rem(13);
          background: url("@img/mainpage/feedback/contact-border.png") 0 0 / 100% 100% no-repeat;
+         @media (max-width: $tablet) {
+            height: 140%;
+            width: percent(302, 320);
+            background: url("@img/mainpage/feedback/contact-border-2.png") 0 0 / 100% 100% no-repeat;
+         }
       }
    }
    // .feedback__title
@@ -61,9 +79,15 @@
       line-height: 1.03;
       letter-spacing: rem(1.04);
       text-transform: uppercase;
-
+      @media (max-width: $mobileSmall) {
+         font-size: rem(22);
+         line-height: 1.22;
+         letter-spacing: rem(0.88);
+      }
       &:not(:last-child) {
          margin-bottom: rem(30);
+         @media (max-width: $mobileSmall) {
+         }
       }
    }
    // .feedback__address
@@ -86,13 +110,28 @@
          font-weight: 450;
          line-height: 1.69;
          letter-spacing: rem(0.64);
+         @media (max-width: $mobileSmall) {
+            font-size: rem(14);
+            line-height: 1.14;
+            letter-spacing: rem(0.56);
+         }
       }
    }
    // .feedback__box
    &__box {
-      padding: percent(115, 1522) percent(70, 1522) percent(90, 1522);
+      // padding: percent(115, 1522) percent(60, 1522) percent(90, 1522);
       position: relative;
       flex: 0 0 percent(669, 1522);
+      @media (max-width: em(692)) {
+         flex: 0 0 rem(692);
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+   &__decor-box {
+      min-width: rem(513);
       aspect-ratio: 1/1;
       background-color: $color-white;
       border-radius: 50%;
@@ -110,29 +149,62 @@
          width: percent(811, 669);
          background-color: rgba($color-white, 0.3);
          z-index: -1;
+         @media (max-width: em(692)) {
+            display: none;
+         }
       }
       &::after {
          width: percent(627, 669);
          box-shadow: 0px 7px 18px 0px rgba(73, 93, 124, 0.08);
          // z-index: ;
       }
-      & > * {
+      @media (max-width: $tablet) {
+         height: rem(669);
+      }
+      @media (max-width: em(692)) {
+         position: absolute;
+         // top: 50%;
+         // left: 50%;
+         // transform: translate(-50%, -50%);
+      }
+   }
+   &__inner-box {
+      position: absolute;
+      top: 52%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: percent(534, 669);
+      z-index: 1;
+      @media (max-width: em(692)) {
+         margin: 0 auto;
          position: relative;
-         z-index: 1;
+         top: auto;
+         left: auto;
+         transform: none;
+      }
+      @media (max-width: $mobileSmall) {
+         width: auto;
       }
    }
    // .feedback__header
    &__header {
-      @include adaptiveValue("font-size", 26, 20);
+      @include adaptiveValue("font-size", 26, 20, $containerWidth, 991, 1);
       text-align: center;
+      @media (max-width: $pc) {
+         // @include adaptiveValue("font-size", 26, 20, 992, 320, 1);
+      }
       &:not(:last-child) {
-         margin-bottom: percent(65, 529);
+         // margin-bottom: percent(65, 529);
+         @include adaptiveValue("margin-bottom", 65, 20, $containerWidth, 1100, 1);
+         @media (max-width: $pc) {
+            @include adaptiveValue("margin-bottom", 65, 20);
+         }
       }
    }
    // .feedback__form
    &__form {
       // display: grid;
-      width: percent(374, 529);
+      max-width: rem(374);
       margin: 0 auto;
    }
    // .feedback__submit
@@ -143,6 +215,13 @@
       position: absolute;
       right: 0;
       top: 50%;
+      @media (max-width: $pc) {
+         right: rem(22);
+      }
+      @media (max-width: $tablet) {
+         top: auto;
+         bottom: rem(30);
+      }
    }
    &__name {
       &:not(:last-child) {
@@ -151,12 +230,50 @@
    }
    &__tel {
       &:not(:last-child) {
-         margin-bottom: rem(40);
+         @include adaptiveValue("margin-bottom", 40, 20, $containerWidth, 1100, 1);
+         @media (max-width: $tablet) {
+            // @include adaptiveValue("margin-bottom", 40, 20, 992, 320, 1);
+            margin-bottom: rem(48);
+         }
       }
    }
    &__consent {
       &:not(:last-child) {
-         margin-bottom: rem(40);
+         @include adaptiveValue("margin-bottom", 40, 20, $containerWidth, 1100, 1);
+         @media (max-width: $tablet) {
+            // @include adaptiveValue("margin-bottom", 40, 20, 992, 320, 1);
+            margin-bottom: rem(44);
+         }
+      }
+   }
+   &__wing {
+      position: absolute;
+      @include adaptiveValue("width", 259, 126);
+      height: auto;
+      aspect-ratio: 259 / 129;
+      object-fit: contain;
+      top: percent(239, 1080);
+      right: percent(100, 1552);
+      animation: float 4s ease-in-out infinite;
+      @media (max-width: em(1120)) {
+         top: percent(94, 1240);
+      }
+
+      @keyframes float {
+         0% {
+            filter: drop-shadow(20px 5px 5px rgba(0, 0, 0, 0.2));
+            transform: translateY(0);
+         }
+
+         50% {
+            filter: drop-shadow(0 25px 15px rgba(0, 0, 0, 0.2));
+            transform: translateY(-20px);
+         }
+
+         100% {
+            filter: drop-shadow(20px 5px 5px rgba(0, 0, 0, 0.2));
+            transform: translateY(0);
+         }
       }
    }
 }

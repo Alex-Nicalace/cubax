@@ -68,6 +68,12 @@
       }
       .scroll__label {
          order: 2;
+         &::before {
+            content: attr(data-label);
+            @media (max-width: $tablet) {
+               content: attr(data-tiny-label);
+            }
+         }
       }
    }
 }

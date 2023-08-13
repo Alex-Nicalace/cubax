@@ -2,12 +2,16 @@
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   gap: rem(20);
+   // gap: rem(20);
+   margin: var(--card-advantage-container-m, rem(-10));
    // .advantages__item
    &__item {
-      flex: 0 0 rem(263);
+      margin: var(--card-advantage-item-m, rem(10));
+      height: var(--card-advantage-h, auto);
+      flex: 0 0 var(--card-advantage-w, rem(263));
       // flex: 0 0 percent(263, 1678);
-      padding: rem(41) rem(44) rem(32) rem(32);
+      // padding: rem(41) rem(44) rem(32) rem(32);
+      padding: var(--card-advantage-pt, rem(40)) var(--card-advantage-pl, rem(40));
       // display: grid;
       // row-gap: rem(20);
 
@@ -19,9 +23,20 @@
       &:not(:last-child) {
          margin-bottom: rem(20);
       }
+      @media (max-width: $mobile) {
+         width: rem(20);
+         height: rem(20);
+         &:not(:last-child) {
+            margin-bottom: rem(10);
+         }
+      }
    }
    // .advantages__title
    &__title {
       @extend %small;
+      @media (max-width: $mobile) {
+         font-size: rem(13);
+         line-height: 1.69;
+      }
    }
 }

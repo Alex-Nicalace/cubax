@@ -3,7 +3,9 @@
 	@font-face {
 		font-family: $font_name;
 		font-display: swap;
-		src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff");
+		src:
+			url("../fonts/#{$file_name}.woff2") format("woff2"),
+			url("../fonts/#{$file_name}.woff") format("woff");
 		font-weight: #{$weight};
 		font-style: #{$style};
 	}
@@ -26,6 +28,11 @@
 //vw
 @function vw($px, $from: $maxWidth) {
 	$result: math.div($px, $from) * 100vw;
+	@return $result;
+}
+// vh
+@function vh($px, $from) {
+	$result: math.div($px, $from) * 100vh;
 	@return $result;
 }
 // fr

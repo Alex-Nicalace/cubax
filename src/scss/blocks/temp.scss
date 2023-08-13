@@ -4,6 +4,12 @@
    line-height: 1.5;
    letter-spacing: rem(0.64);
 }
+%base {
+   font-size: rem(16);
+   font-weight: 400;
+   line-height: 1.5;
+   letter-spacing: rem(0.64);
+}
 
 %small {
    font-size: rem(14);

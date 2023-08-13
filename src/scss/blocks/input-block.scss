@@ -1,0 +1,32 @@
+.input-block {
+   display: flex;
+   position: relative;
+   // .input-block__icon
+   &__icon {
+      position: absolute;
+      right: 0;
+      height: rem(22);
+      width: rem(22);
+
+      fill: $color-steel-blue;
+      transition: all 0.3s ease 0s;
+   }
+   // .input-block__input
+   &__input {
+      padding-bottom: rem(15);
+      padding-right: rem(40);
+      border-bottom: rem(1) solid rgba($color-steel-blue, 0.5);
+      @extend %base;
+      outline: none;
+      flex-grow: 1;
+      transition: all 0.3s ease 0s;
+
+      &:focus {
+         border-bottom: rem(1) solid $color-steel-blue;
+         & + svg {
+            fill: $color-steel-blue;
+            transform: scale(1.1);
+         }
+      }
+   }
+}

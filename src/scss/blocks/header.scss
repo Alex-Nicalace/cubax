@@ -3,8 +3,9 @@
 	left: 0;
 	top: 0;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 	@include adaptiveValue("padding-top", 46, 19);
+	transition: all 0.3s ease 0s;
 	// .header__container
 	&__container {
 		display: grid;
@@ -47,6 +48,12 @@
 			.tel__number {
 				display: none;
 			}
+		}
+	}
+	&_scroll {
+		top: -100%;
+		&_up {
+			top: 0;
 		}
 	}
 }

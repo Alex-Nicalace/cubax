@@ -38,4 +38,42 @@
       writing-mode: vertical-lr;
       transform: rotate(-180deg);
    }
+   &_up {
+      .scroll__wrap-icon {
+         background-color: $color-white;
+         border: none;
+         filter: drop-shadow(0px 7px 4px rgba(73, 93, 124, 0.1));
+         order: 1;
+         &::before {
+            bottom: auto;
+            top: rem(38);
+         }
+         &::after {
+            content: "";
+            position: absolute;
+            width: rem(67);
+            height: rem(67);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: rgba($color-white, 0.5);
+            z-index: -1;
+         }
+      }
+      .scroll__icon {
+         width: rem(10);
+         height: rem(6);
+         stroke: $color-steel-blue;
+      }
+      .scroll__label {
+         order: 2;
+         &::before {
+            content: attr(data-label);
+            @media (max-width: $tablet) {
+               content: attr(data-tiny-label);
+            }
+         }
+      }
+   }
 }

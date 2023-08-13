@@ -1,0 +1,108 @@
+.card-tech {
+   // padding: rem(60);
+   @include adaptiveValue("padding", 60, 0);
+   position: relative;
+
+   display: flex;
+   flex-direction: column;
+
+   border-radius: rem(30);
+
+   &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: url("@img/card-tech/Rectangle.png") 0 0 / 100% 100% no-repeat;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+   }
+
+   @media (any-hover: hover) {
+      &:hover {
+         &::before {
+            opacity: 1;
+         }
+      }
+   }
+
+   // .card-tech__header
+   &__header {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      // font-size: rem(26);
+      @include adaptiveValue("font-size", 26, 16);
+      line-height: math.div(34, 26);
+      letter-spacing: rem(1.04);
+      text-transform: uppercase;
+      &::before {
+         content: "cubax";
+         color: $color-steel-blue;
+         // font-size: rem(42);
+         @include adaptiveValue("font-size", 42, 26);
+         font-weight: 700;
+         // line-height: math.div(42, 26);
+         letter-spacing: rem(1.68);
+      }
+   }
+   // .card-tech__image
+   &__image {
+      position: relative;
+      aspect-ratio: 630/396;
+      img {
+         position: absolute;
+         width: 100%;
+         height: percent(464, 396);
+         top: 0;
+         left: 0;
+      }
+   }
+   // .card-tech__bottom
+   &__bottom {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(25) rem(10);
+      justify-content: space-between;
+   }
+   // .card-tech__list
+   &__list {
+      flex-grow: 1;
+      display: grid;
+      // grid-template-columns: repeat(auto-fill, auto);
+      gap: rem(20) rem(10);
+      grid-template-columns: repeat(2, auto);
+   }
+   // .card-tech__item
+   &__item {
+      display: flex;
+      align-items: center;
+   }
+   // .card-tech__icon-item
+   &__icon-item {
+      fill: $color-steel-blue;
+      @include adaptiveValue("width", 30, 16);
+      @include adaptiveValue("height", 30, 16);
+      // margin-right: rem(20);
+      @include adaptiveValue("margin-right", 20, 9);
+   }
+   // .card-tech__label-item
+   &__label-item {
+      // font-size: rem(16);
+      @include adaptiveValue("font-size", 16, 12);
+      font-weight: 450;
+      line-height: 1.68;
+      letter-spacing: rem(0.64);
+      @media (max-width: $mobileSmall) {
+         word-wrap: break-word;
+      }
+   }
+   // .card-tech__button
+   &__button {
+   }
+}

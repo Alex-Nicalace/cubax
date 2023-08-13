@@ -1,0 +1,48 @@
+.contacts-feedback {
+   padding: rem(13);
+   background-color: $color-steel-blue;
+   color: $color-white;
+   border-radius: rem(30);
+   // .contacts-feedback__wrap
+   &__wrap {
+      padding: rem(44) rem(42) rem(36);
+      border: rem(1) solid $color-white;
+      border-radius: rem(20);
+   }
+   // .contacts-feedback__title
+   &__title {
+      font-size: rem(26);
+      font-weight: 700;
+      line-height: 1.03;
+      letter-spacing: rem(1.04);
+      text-transform: uppercase;
+
+      &:not(:last-child) {
+         margin-bottom: rem(30);
+      }
+   }
+   // .contacts-feedback__body
+   &__body {
+      display: grid;
+      row-gap: rem(15);
+   }
+   // .contacts-feedback__item
+   &__item {
+      display: flex;
+      align-items: center;
+   }
+   // .contacts-feedback__icon-item
+   &__icon-item {
+      margin-right: rem(12);
+      fill: currentColor;
+      min-width: rem(16);
+   }
+   // .contacts-feedback__label-item
+   &__label-item {
+      font-size: rem(16);
+      font-style: normal;
+      font-weight: 450;
+      line-height: 1.69;
+      letter-spacing: rem(0.64);
+   }
+}

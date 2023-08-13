@@ -63,6 +63,13 @@
             color: $color-main;
          }
       }
+      .header_sombre & {
+         @media (any-hover: hover) {
+            &:hover {
+               color: $color-white;
+            }
+         }
+      }
    }
    &__tel {
       display: none;

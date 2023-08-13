@@ -5,6 +5,7 @@
    column-gap: rem(11);
    // .tel__icon
    &__icon {
+      fill: currentColor;
       width: rem(22);
       height: rem(22);
    }

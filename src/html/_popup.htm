@@ -1,11 +1,54 @@
-<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-			</div>
-		</div>
-	</div>
-</div>
- -->
+<dialog id="modal-thanks" class="modal">
+  <div class="modal__dialog">
+    <div class="modal__content modal__content_pb_0">
+      <button class="modal__icon-close" data-close>
+        <svg width="16" height="16">
+          <use xlink:href="@img/icons/sprite.svg#cross"></use>
+        </svg>
+      </button>
+      <!-- <div class="modal__header">
+        <div class="modal__title">Благодарим за доверие!</div>
+      </div> -->
+      <div class="modal__body thanks">
+        <img
+          class="thanks__cloud thanks__cloud_n_1"
+          src="@img/thanks/clouds/01.png"
+          alt="image of cloud"
+          loading="lazy"
+        />
+        <img
+          class="thanks__cloud thanks__cloud_n_2"
+          src="@img/thanks/clouds/02.png"
+          alt="image of cloud"
+          loading="lazy"
+        />
+        <img
+          class="thanks__cloud thanks__cloud_n_3"
+          src="@img/thanks/clouds/03.png"
+          alt="image of cloud"
+          loading="lazy"
+        />
+        <h2 class="thanks__title">Благодарим за доверие!</h2>
+        <div class="thanks__descr">
+          Наши менеджеры свяжутся с Вами в ближайшее время.
+        </div>
+        <div class="thanks__button">
+          <a href="home.html" class="button button_outline button_color_black"
+            >На главную</a
+          >
+        </div>
+        <div class="thanks__img-operator">
+          <img
+            src="@img/thanks/operator-telephone.png"
+            alt="photo of operator"
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <!-- <div class="modal__footer">
+				<button class="modal__close btn btn-danger" data-close>Close</button>
+				<button class="modal__accept btn btn-success">Save changes</button>
+			</div> -->
+    </div>
+  </div>
+</dialog>

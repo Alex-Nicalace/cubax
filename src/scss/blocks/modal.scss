@@ -1,0 +1,107 @@
+.modal {
+   margin: auto;
+   max-width: rem(1260);
+   overflow: hidden;
+   overflow-y: auto;
+   background-color: $color-modal-bg;
+   border-radius: rem(50);
+   @media (max-width: em(1260 + $containerPadding)) {
+      max-width: calc(100% - #{$containerPadding}px);
+   }
+
+   &::backdrop {
+      background-color: $color-modal-backdrop;
+   }
+   // .modal__dialog
+   &__dialog {
+   }
+   // .modal__content
+   &__content {
+      position: relative;
+      @include adaptiveValue("padding-top", 96, 40);
+      @include adaptiveValue("padding-bottom", 96, 40);
+      @include adaptiveValue("padding-left", 128, 24);
+      @include adaptiveValue("padding-right", 128, 24);
+      &_pb_0 {
+         padding-bottom: 0;
+      }
+   }
+   // .modal__icon-close
+   &__icon-close {
+      position: absolute;
+      @include adaptiveValue("top", 43, 27);
+      @include adaptiveValue("right", 43, 27);
+
+      svg {
+         stroke: $color-main;
+         @include adaptiveValue("width", 24, 14);
+         @include adaptiveValue("height", 24, 14);
+      }
+   }
+   // .modal__header
+   &__header {
+      &:not(:last-child) {
+         margin-bottom: rem(32);
+      }
+   }
+   // .modal__title
+   &__title {
+      @include adaptiveValue("font-size", 28, 16);
+      // color: $color-gray-900;
+      text-align: center;
+   }
+   // .modal__body
+   &__body {
+   }
+   &__footer {
+      text-align: center;
+      &:not(:first-child) {
+         margin-top: rem(32);
+      }
+   }
+   // .modal_right-side
+   &_right-side {
+      top: 0;
+      left: auto;
+      right: 0;
+      height: 100%;
+      transform: none;
+      max-height: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      width: rem(352);
+      .modal__dialog {
+         height: 100%;
+      }
+      .modal__content {
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         padding: 0;
+      }
+      .modal__header {
+         padding: rem(32) rem(72) rem(24) rem(24);
+         border-bottom: rem(1) solid gray;
+         margin-bottom: 0;
+      }
+      .modal__title {
+         // @extend h5;
+         text-align: left;
+      }
+      .modal__body {
+         flex-grow: 1;
+      }
+      .modal__icon-close {
+         right: rem(24);
+         top: rem(33);
+      }
+   }
+   &_left-side {
+      @extend .modal_right-side;
+      right: auto;
+      left: 0;
+      border-radius: rem(4);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+   }
+}

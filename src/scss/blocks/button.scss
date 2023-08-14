@@ -15,9 +15,17 @@
             background-color: $color-razzmatazz;
          }
       }
-      @media (max-width: $mobileSmall) {
+      @media (max-width: $mobile) {
          font-size: rem(14);
          padding: rem(13) rem(39);
+      }
+   }
+   &_color_black {
+      color: $color-main;
+      @media (any-hover: hover) {
+         &:hover {
+            color: $color-white;
+         }
       }
    }
 }

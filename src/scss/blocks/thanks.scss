@@ -1,0 +1,100 @@
+.thanks {
+   position: relative;
+   @media (min-width: $mobileSmall) {
+      display: grid;
+      grid-template-columns: 1fr percent(462, 1000);
+      // grid-template-columns: percent(540, 1000) 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+         "t i"
+         "d i"
+         "b i";
+   }
+   // .thanks__title
+   &__title {
+      grid-area: t;
+      @include adaptiveValue("font-size", 60, 36);
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: rem(2.4);
+      &:not(:last-child) {
+         margin-bottom: em(45, 60);
+      }
+   }
+   // .thanks__descr
+   &__descr {
+      grid-area: d;
+      flex-grow: 1;
+      color: $color-gray;
+      font-size: rem(16);
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: rem(0.64);
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+      }
+      @media (max-width: $mobile) {
+         font-size: rem(14);
+      }
+   }
+   // .thanks__button
+   &__button {
+      grid-area: b;
+      @include adaptiveValue("margin-bottom", 100, 40);
+      @media (max-width: $mobileSmall) {
+         text-align: center;
+      }
+   }
+   &__img-operator {
+      grid-area: i;
+      display: none;
+      @media (min-width: $mobileSmall) {
+         display: block;
+      }
+      align-self: end;
+      img {
+         width: 100%;
+         // height: 100%;
+         aspect-ratio: 462/621;
+         object-fit: cover;
+      }
+   }
+   // .thanks__cloud
+   &__cloud {
+      position: absolute;
+      z-index: -1;
+      &:nth-child(1) {
+         animation: clouds 16s linear alternate infinite;
+      }
+      &:nth-child(2) {
+         animation: clouds 24s linear alternate-reverse infinite;
+      }
+      &:nth-child(3) {
+         animation: clouds 32s linear alternate infinite;
+      }
+      // .thanks__cloud_n
+      &_n_1 {
+         width: percent(745, 1004);
+         aspect-ratio: 745/396;
+
+         top: percent(202, 623);
+         left: percent(-76, 1004);
+      }
+      // .thanks__cloud_n
+      &_n_2 {
+         width: percent(754, 1004);
+         aspect-ratio: 754/261;
+
+         top: percent(330, 623);
+         left: percent(384, 1004);
+      }
+      // .thanks__cloud_n
+      &_n_3 {
+         width: percent(766, 1004);
+         aspect-ratio: 766/246;
+
+         top: percent(324, 623);
+         left: percent(325, 1004);
+      }
+   }
+}

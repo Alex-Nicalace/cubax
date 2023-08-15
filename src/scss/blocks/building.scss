@@ -1,0 +1,115 @@
+.building {
+   // .building__header
+   &__header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      @include adaptiveValue("gap", 25, 8);
+      &:not(:last-child) {
+         margin-bottom: rem(30);
+         @media (max-width: $mobile) {
+            margin-bottom: rem(20);
+         }
+      }
+   }
+   // .building__title
+   &__title {
+      @include adaptiveValue("font-size", 60, 20);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: rem(2.4);
+      @media (max-width: $mobileSmall) {
+         letter-spacing: rem(0.88);
+      }
+   }
+   &__heading {
+      @include adaptiveValue("font-size", 42, 22);
+      font-weight: 300;
+      line-height: rem(60);
+      letter-spacing: rem(1.68);
+      text-transform: uppercase;
+      @media (max-width: $mobileSmall) {
+         letter-spacing: rem(0.88);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(22);
+         @media (max-width: $mobile) {
+            margin-bottom: rem(8);
+         }
+      }
+   }
+   // .building__descr-title
+   &__descr-title {
+      color: $color-gray;
+      @include adaptiveValue("font-size", 20, 11);
+      font-weight: 750;
+      line-height: 1.4;
+      &::before {
+         content: "(";
+      }
+      &::after {
+         content: ")";
+      }
+   }
+   // .building__props
+   &__props {
+      display: flex;
+      gap: rem(24);
+      @include adaptiveValue("gap", 24, 15, $containerWidth, 360, 1);
+      &:not(:last-child) {
+         margin-bottom: rem(35);
+         @media (max-width: $mobile) {
+            margin-bottom: rem(8);
+         }
+      }
+   }
+   // .building__prop
+   &__prop {
+      flex-basis: rem(286);
+      @include adaptiveValue("flex-basis", 286, 124, $containerWidth, 360, 1);
+   }
+   // .building__card-building
+   &__card-building {
+   }
+   // .building__plans
+   &__plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: rem(35) percent(22, 1000);
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 100, 55);
+      }
+   }
+   // .building__plan
+   &__plan {
+      flex-basis: percent(314, 1000);
+      @media (max-width: $tablet) {
+         min-width: rem(270);
+      }
+   }
+   // .building__interior
+   &__interior {
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 40, 20);
+      }
+   }
+   // .building__text
+   &__text {
+      color: $color-gray;
+      font-size: rem(16);
+      font-weight: 700;
+      line-height: rem(24);
+      letter-spacing: rem(0.64);
+      @media (max-width: $mobileSmall) {
+         font-size: rem(14);
+         line-height: rem(20);
+         letter-spacing: rem(0.56);
+      }
+      p {
+         &:not(:last-child) {
+            margin-bottom: rem(35);
+         }
+      }
+   }
+}

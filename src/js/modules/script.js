@@ -16,7 +16,6 @@ scrollToAnchor();
  * @param {IntersectionObserverEntry[]} entries
  */
 const onIntersection = (entries) => {
-  console.log(entries);
   const headerEl = document.querySelector('header.header');
   entries.forEach((entry) => {
     const isDark =

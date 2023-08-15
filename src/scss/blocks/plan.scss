@@ -1,0 +1,25 @@
+.plan {
+   // .plan__image
+   &__image {
+      width: 100%;
+      aspect-ratio: 314/215;
+      border-radius: rem(30);
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+         @media (max-width: $mobileSmall) {
+            margin-bottom: rem(10);
+         }
+      }
+   }
+   // .plan__label
+   &__label {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: rem(24);
+      letter-spacing: rem(0.64);
+      @media (max-width: $mobileSmall) {
+         font-size: rem(14);
+         letter-spacing: rem(0.56);
+      }
+   }
+}

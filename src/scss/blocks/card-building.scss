@@ -1,0 +1,103 @@
+.card-building {
+   &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 85, 40);
+   }
+   // .card-building__wrap
+   &__wrap {
+      @media (min-width: $tablet) {
+         display: grid;
+         grid-template-columns: percent(588, 1000) 1fr;
+         column-gap: percent(55, 1000);
+         grid-template-rows: 1fr auto auto;
+         grid-template-areas:
+            "g d"
+            "g p"
+            "g b";
+      }
+   }
+   // .card-building__gallery
+   &__gallery {
+      margin-bottom: rem(10);
+      grid-area: g;
+      @media (min-width: $tablet) {
+         margin-bottom: 0;
+      }
+   }
+   // .card-building__main-slider
+   &__main-slider {
+   }
+   // .card-building__main-wrapper
+   &__main-wrapper {
+   }
+   // .card-building__main-slide
+   &__main-slide {
+      img {
+         width: 100%;
+         aspect-ratio: 588/424;
+      }
+   }
+   // .card-building__thumbs-slider
+   &__thumbs-slider {
+      margin-top: percent(-50, 588);
+   }
+   // .card-building__thumbs-wrapper
+   &__thumbs-wrapper {
+   }
+   // .card-building__thumbs-slide
+   &__thumbs-slide {
+      img {
+         width: 100%;
+         aspect-ratio: 153/110;
+      }
+   }
+   // .card-building__descr
+   &__descr {
+      grid-area: d;
+
+      color: $color-gray;
+      @include adaptiveValue("font-size", 20, 14);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: rem(0.8);
+      @media (max-width: $mobile) {
+         line-height: 1.71;
+         letter-spacing: rem(0.56);
+      }
+      p {
+         &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 36, 3);
+         }
+      }
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 60, 13);
+      }
+   }
+   // .card-building__price
+   &__price {
+      grid-area: p;
+
+      font-size: 30px;
+      @include adaptiveValue("font-size", 30, 20);
+      line-height: rem(24);
+      letter-spacing: 1.2px;
+      @media (max-width: $mobile) {
+         letter-spacing: 0.8px;
+      }
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 80, 15);
+      }
+   }
+   // .card-building__button
+   &__button {
+      grid-area: b;
+
+      .button {
+         @media (max-width: $mobile) {
+            font-size: rem(14);
+            letter-spacing: rem(0.56);
+            padding-left: rem(21);
+            padding-right: rem(21);
+         }
+      }
+   }
+}

@@ -104,4 +104,26 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
    }
+   // .modal__scroll
+   // модальное окно большое по высоте необходим скролл подобный скролу документа (крайне справа)
+   // поэтому такие модификации
+   &_scroll {
+      margin: 0;
+      padding: rem(30) 0;
+      height: 100%;
+      width: 100%;
+      max-width: none;
+      max-height: none;
+      border-radius: 0;
+      background-color: transparent;
+      .modal__dialog {
+         margin: auto;
+         max-width: rem(1260);
+         background-color: $color-modal-bg;
+         border-radius: rem(50);
+         @media (max-width: em(1260 + $containerPadding)) {
+            max-width: calc(100% - #{$containerPadding}px);
+         }
+      }
+   }
 }

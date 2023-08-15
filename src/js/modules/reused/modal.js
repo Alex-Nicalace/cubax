@@ -44,9 +44,15 @@ class Modal {
      */
     const openModalFromHash = () => {
       const hash = window.location.hash;
+      /**
+       * HTML элемент dialog
+       * @type {HTMLDialogElement}
+       */
       const modalEl = hash && document.querySelector(hash);
-      if (!modalEl) return;
-      Modal.showModal(modalEl);
+      // удостовериться что это действительно dialog
+      if (modalEl && modalEl.showModal) {
+        Modal.showModal(modalEl);
+      }
     };
     window.addEventListener('load', openModalFromHash);
     window.addEventListener('hashchange', openModalFromHash);

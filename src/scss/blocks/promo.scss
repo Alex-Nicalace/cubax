@@ -120,18 +120,10 @@
       }
       @keyframes clouds {
          0% {
-            transform: translateX(-50%);
-            opacity: 0;
-         }
-         10% {
-            opacity: 1;
-         }
-         90% {
-            opacity: 1;
+            transform: translateX(-20%);
          }
          100% {
-            transform: translateX(50%);
-            opacity: 0;
+            transform: translateX(20%);
          }
       }
       &_1 {
@@ -289,7 +281,9 @@
       --card-advantage-item-m: #{percent(10, 1698)};
       --card-advantage-w: #{percent(263, 1698)};
       --card-advantage-pt: #{rem(35)};
+      --card-advantage-pb: #{rem(35)};
       --card-advantage-pl: #{rem(40)};
+      --card-advantage-pr: #{rem(40)};
       @media (min-width: em(1700)) {
          margin: 0 rem(-78);
       }
@@ -299,14 +293,16 @@
          // --card-advantage-w: #{percent(263, 1542)};
       }
       @media (max-width: $tablet) {
-         --card-advantage-container-m: #{rem(-10)};
-         --card-advantage-item-m: #{rem(10)};
+         --card-advantage-container-m: #{rem(-7)};
+         --card-advantage-item-m: #{rem(7)};
          --card-advantage-w: #{rem(263)};
       }
       @media (max-width: $mobile) {
          --card-advantage-w: #{rem(149)};
          --card-advantage-pt: #{rem(25)};
+         --card-advantage-pb: #{rem(25)};
          --card-advantage-pl: #{rem(20)};
+         --card-advantage-pr: #{rem(20)};
          --card-advantage-h: #{rem(160)};
       }
       @media (max-width: em(359)) {

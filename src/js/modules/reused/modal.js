@@ -9,15 +9,13 @@ class Modal {
    * @param {string | undefined} selector - Селектор для выбора всех триггеров открытия окна.
    */
   constructor(selector) {
-    // все триггеры открытия окна
+    /**
+     * Триггеры открытия окна.
+     * @type {NodeList}
+     */
     this.triggers = document.querySelectorAll(selector);
     this.init();
   }
-  /**
-   * Триггеры открытия окна.
-   * @type {NodeList}
-   */
-  triggers;
   /**
    * Инициализация модального окна.
    * @private

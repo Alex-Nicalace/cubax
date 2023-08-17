@@ -1,0 +1,216 @@
+.construction {
+   min-height: 100vh;
+   // .construction__container
+   &__container {
+      @include adaptiveValue("padding-top", 205, 118);
+      @include adaptiveValue("padding-bottom", 74, 100);
+
+      @media (min-width: $tablet) {
+         display: grid;
+         grid-template-columns: percent(750, 1522) 1fr;
+         grid-template-areas:
+            "h p"
+            "t p"
+            "b p"
+            "a a"
+            "s s";
+      }
+   }
+   // .construction__header
+   &__header {
+      text-align: center;
+      @media (min-width: $tablet) {
+         grid-area: h;
+
+         text-align: start;
+         &:not(:last-child) {
+            margin-bottom: rem(75);
+         }
+      }
+   }
+   &__wrap-picture {
+      grid-area: p;
+      position: relative;
+   }
+   // .construction__picture
+   &__picture {
+      position: relative;
+      z-index: -1;
+
+      width: 100%;
+
+      aspect-ratio: 705/750;
+
+      @media (min-width: $tablet) {
+         position: absolute;
+         left: percent(-50, 772);
+         top: percent(-120, 644);
+         width: percent(705, 772);
+      }
+
+      @media (max-width: $pc) and (min-width: $tablet) {
+         top: 50%;
+         transform: translateY(-50%);
+      }
+
+      @media (max-width: $tablet) {
+         margin: 0 auto;
+         max-width: rem(650);
+      }
+   }
+   // .construction__img
+   &__img {
+      // width: percent(320, 360);
+      width: 100%;
+      height: 100%;
+   }
+   &__cloud {
+      position: absolute;
+      touch-action: none;
+      &:nth-child(1) {
+         width: percent(304, 705);
+         aspect-ratio: 304/100;
+         top: percent(588, 750);
+         left: percent(-80, 705);
+      }
+      &:nth-child(2) {
+         aspect-ratio: 719/192;
+         width: percent(719, 705);
+         top: percent(588, 750);
+         left: percent(-247, 705);
+      }
+      &:nth-child(3) {
+         aspect-ratio: 439/145;
+         width: percent(439, 705);
+         top: percent(588, 750);
+         left: percent(127, 705);
+      }
+      &:nth-child(4) {
+         aspect-ratio: 305/133;
+         width: percent(305, 705);
+         top: percent(581, 750);
+         left: percent(333, 705);
+      }
+      &:nth-child(5) {
+         aspect-ratio: 401/107;
+         width: percent(401, 705);
+         top: percent(595, 750);
+         left: percent(255, 705);
+      }
+
+      &:nth-child(3n + 1) {
+         animation: clouds 16s linear alternate infinite;
+      }
+      &:nth-child(3n + 2) {
+         animation: clouds 24s linear alternate-reverse infinite;
+      }
+      &:nth-child(3n + 3) {
+         animation: clouds 32s linear alternate infinite;
+      }
+   }
+   &__box-text {
+      grid-area: t;
+
+      display: flex;
+      justify-content: center;
+      @media (min-width: $tablet) {
+         column-gap: percent(60, 750);
+         justify-content: flex-start;
+      }
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 60, 50);
+      }
+   }
+   // .construction__text
+   &__text {
+      max-width: rem(595);
+      font-size: rem(14);
+      font-weight: 400;
+      line-height: rem(28);
+      @media (min-width: $tablet) {
+         padding-top: percent(30, 750);
+      }
+   }
+   // .construction__button
+   &__button {
+      grid-area: b;
+      text-align: center;
+      @media (min-width: $tablet) {
+         text-align: start;
+      }
+      @media (min-width: $mobileSmall) {
+         .button {
+            width: rem(306);
+         }
+      }
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 100, 80);
+      }
+   }
+   // .construction__advantages
+   &__advantages {
+      grid-area: a;
+
+      --card-advantage-container-m: #{percent(-10, 1522)};
+      --card-advantage-item-m: #{percent(10, 1542)};
+      // --card-advantage-w: #{percent(287, 1542)};
+      --card-advantage-w: #{rem(287)};
+      --card-advantage-pt: #{rem(30)};
+      --card-advantage-pb: #{rem(30)};
+      --card-advantage-pl: #{rem(30)};
+      --card-advantage-pr: #{rem(30)};
+
+      @media (max-width: $tablet) {
+         --card-advantage-container-m: #{rem(-7)};
+         --card-advantage-item-m: #{rem(7)};
+         --card-advantage-w: #{rem(287)};
+      }
+
+      @media (max-width: $mobile) {
+         --card-advantage-w: #{rem(149)};
+         --card-advantage-pt: #{rem(25)};
+         --card-advantage-pl: #{rem(20)};
+         --card-advantage-pb: #{rem(5)};
+         --card-advantage-pr: #{rem(5)};
+         --card-advantage-h: #{rem(160)};
+      }
+      @media (max-width: $mobileSmall) {
+         .advantages {
+            justify-content: flex-start;
+         }
+      }
+      @media (max-width: em(359)) {
+         --card-advantage-w: calc(100% - 14px);
+         --card-advantage-h: auto;
+         --card-advantage-pb: #{rem(25)};
+         --card-advantage-pr: #{rem(20)};
+      }
+
+      &:not(:last-child) {
+         margin-bottom: rem(75);
+      }
+   }
+   // .construction__slogan
+   &__slogan {
+      display: none;
+
+      @media (min-width: $mobile) {
+         grid-area: s;
+
+         color: $color-blue-gray-2;
+         @include adaptiveValue("font-size", 30, 20);
+         text-align: center;
+         font-weight: 300;
+         line-height: 1.4;
+         letter-spacing: rem(1.2);
+         text-transform: uppercase;
+      }
+   }
+   // .promo__scroll
+   &__scroll {
+      display: none;
+      @media (min-width: $tablet) {
+         display: flex;
+      }
+   }
+}

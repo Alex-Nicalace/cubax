@@ -11,7 +11,10 @@
       flex: 0 0 var(--card-advantage-w, rem(263));
       // flex: 0 0 percent(263, 1678);
       // padding: rem(41) rem(44) rem(32) rem(32);
-      padding: var(--card-advantage-pt, rem(40)) var(--card-advantage-pl, rem(40));
+      padding-top: var(--card-advantage-pt, rem(40));
+      padding-left: var(--card-advantage-pl, rem(40));
+      padding-bottom: var(--card-advantage-pb, rem(40));
+      padding-right: var(--card-advantage-pr, rem(40));
       // display: grid;
       // row-gap: rem(20);
 
@@ -34,9 +37,5 @@
    // .advantages__title
    &__title {
       @extend %small;
-      @media (max-width: $mobile) {
-         font-size: rem(13);
-         line-height: 1.69;
-      }
    }
 }

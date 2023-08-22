@@ -1,5 +1,93 @@
 .walls {
+   position: relative;
    // .walls_dark
    &_dark {
+   }
+   // .walls__container
+   &__container {
+      @include adaptiveValue("padding-top", 182, 125);
+      @include adaptiveValue("padding-bottom", 130, 70);
+
+      display: grid;
+      grid-template-columns: percent(647, 1522) percent(745, 1522);
+      grid-template-rows: auto 1fr auto auto;
+      justify-content: space-between;
+      grid-template-areas:
+         "h h"
+         "p c1"
+         "p c2"
+         "t t";
+      @media (max-width: $tablet) {
+         grid-template-columns: 1fr 1fr;
+         column-gap: percent(20, 320);
+         grid-template-areas:
+            "h h"
+            "p p"
+            "c1 c2"
+            "t t";
+      }
+      @media (max-width: em(359)) {
+         display: block;
+      }
+   }
+   // .walls__header
+   &__header {
+      grid-area: h;
+
+      max-width: rem(1264);
+      margin: 0 auto;
+      text-align: center;
+   }
+   &__wrap-pic {
+      grid-area: p;
+      aspect-ratio: 647/470;
+      position: relative;
+      @media (max-width: $tablet) {
+         @include adaptiveValue("margin-bottom", 120, 40);
+      }
+   }
+   // .walls__pic-build
+   &__pic-build {
+      position: absolute;
+      width: 118%;
+      // height: 100%;
+      top: percent(-30, 470);
+      left: percent(-22, 647);
+   }
+   // .walls__component
+   &__component {
+      &_num_1 {
+         // margin-top: rem(114);
+         @include adaptiveValue("margin-top", 114, 0);
+         grid-area: c1;
+         align-self: flex-end;
+         margin-bottom: percent(52, 745);
+         @media (max-width: $tablet) {
+            margin-top: 0;
+            align-self: auto;
+         }
+      }
+      &_num_2 {
+         grid-area: c2;
+      }
+   }
+   // .walls__text
+   &__text {
+      grid-area: t;
+      @include adaptiveValue("margin-top", 75, 30);
+      width: percent(1164, 1522);
+      margin: 0 auto;
+      position: relative;
+
+      font-size: rem(18);
+      line-height: rem(30);
+      strong {
+         font-size: rem(20);
+      }
+      @media (max-width: $pc) {
+         width: auto;
+         margin-left: 0;
+         margin-right: 0;
+      }
    }
 }

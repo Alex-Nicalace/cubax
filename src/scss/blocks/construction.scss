@@ -1,5 +1,6 @@
 .construction {
    min-height: 100vh;
+   position: relative;
    // .construction__container
    &__container {
       @include adaptiveValue("padding-top", 205, 118);

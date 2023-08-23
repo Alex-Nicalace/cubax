@@ -394,6 +394,12 @@
             alt=""
             loading="lazy"
           />
+          <img
+            class="walls__cloud background"
+            src="@img/private-owner/walls/bg/clouds.png"
+            alt="cloud"
+            loading="lazy"
+          />
           <div class="walls__container">
             <h2 class="walls__header title">
               <strong>Стены</strong> — ультрапрочный стеклофибробетон и
@@ -406,9 +412,15 @@
                 alt="build"
                 loading="lazy"
               />
+              <div class="walls__point walls__point_1 point"></div>
+              <div class="walls__point walls__point_2 point"></div>
+              <div class="walls__point walls__point_3 point"></div>
             </div>
             <div class="walls__component walls__component_num_1 component">
-              <div class="component__title">Стеклофибробетон</div>
+              <div class="component__title">
+                <span class="component__mark"></span>
+                <span>Стеклофибробетон</span>
+              </div>
               <div class="component__descr">
                 Это бетон марки М500 армированный в объеме щелочестойкой
                 стеклофиброй, водопоглащение которого не более 2%. Бетон с
@@ -419,7 +431,10 @@
               </div>
             </div>
             <div class="walls__component walls__component_num_2 component">
-              <div class="component__title">Пенополиуретан</div>
+              <div class="component__title">
+                <span class="component__mark"></span>
+                <span>Пенополиуретан</span>
+              </div>
               <div class="component__descr">
                 Экологичный, вспененный материал с закрытоячеистой структурой,
                 теплоизоляционные свойства которого выше пенопласта в 1,5 раза,
@@ -436,6 +451,7 @@
               По теплоизоляции это сопоставимо с 30 см минеральной ваты или 60
               см газобетона.
             </div>
+            <canvas class="walls__canvas"></canvas>
           </div>
         </section>
       </main>

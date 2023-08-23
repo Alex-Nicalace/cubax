@@ -8,6 +8,12 @@
       @include adaptiveValue("padding-top", 182, 125);
       @include adaptiveValue("padding-bottom", 130, 70);
 
+      position: relative;
+      & > * {
+         position: relative;
+         z-index: 1;
+      }
+
       display: grid;
       grid-template-columns: percent(647, 1522) percent(745, 1522);
       grid-template-rows: auto 1fr auto auto;
@@ -26,9 +32,9 @@
             "c1 c2"
             "t t";
       }
-      @media (max-width: em(359)) {
-         display: block;
-      }
+      // @media (max-width: em(359)) {
+      //    display: block;
+      // }
    }
    // .walls__header
    &__header {
@@ -42,6 +48,7 @@
       grid-area: p;
       aspect-ratio: 647/470;
       position: relative;
+      z-index: -1;
       @media (max-width: $tablet) {
          @include adaptiveValue("margin-bottom", 120, 40);
       }
@@ -89,5 +96,69 @@
          margin-left: 0;
          margin-right: 0;
       }
+   }
+   // .walls__point
+   &__point {
+      position: absolute;
+      // .walls__point_1
+      &_1 {
+         top: percent(80, 470);
+         left: percent(543, 647);
+         @media (max-width: $tablet) {
+            top: percent(60, 237);
+            left: percent(179, 308);
+         }
+      }
+      // .walls__point_2
+      &_2 {
+         top: percent(180, 470);
+         left: percent(510, 647);
+         @media (max-width: $tablet) {
+            top: percent(68, 237);
+            left: percent(215, 308);
+         }
+      }
+      // .walls__point_3
+      &_3 {
+         top: percent(250, 470);
+         left: percent(527, 647);
+         @media (max-width: $tablet) {
+            top: percent(52, 237);
+            left: percent(100, 308);
+         }
+      }
+   }
+   &__canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+   }
+   &__cloud {
+      width: 130%;
+      z-index: -1;
+      animation: tech-cloud 16s ease-in-out infinite alternate;
+   }
+}
+
+.point {
+   @include adaptiveValue("width", 35, 18);
+   @include adaptiveValue("height", 35, 18);
+
+   background-color: $color-white;
+   border-radius: 50%;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   &::before {
+      content: "";
+      width: percent(13, 35);
+      height: percent(13, 35);
+      border-radius: 50%;
+      background-color: $color-razzmatazz;
    }
 }

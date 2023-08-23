@@ -10,19 +10,20 @@
       &:not(:last-child) {
          @include adaptiveValue("margin-bottom", 18, 0);
       }
-      &::before {
-         content: "";
-         margin-right: rem(17);
-         height: rem(5);
-         width: rem(5);
-         background-color: currentColor;
-         border-radius: 50%;
-      }
       @media (max-width: $tablet) {
          margin-left: 0;
-         &::before {
-            display: none;
-         }
+         flex-direction: column;
+         align-items: flex-start;
+      }
+   }
+   &__mark {
+      margin-right: rem(17);
+      height: rem(5);
+      width: rem(5);
+      background-color: currentColor;
+      border-radius: 50%;
+      @media (max-width: $tablet) {
+         margin-bottom: rem(13);
       }
    }
    // .component__descr

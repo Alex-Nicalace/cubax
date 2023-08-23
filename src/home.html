@@ -1,652 +1,387 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/_head.htm',{ "title":"Главная" })
+@@include('html/_head.htm',{ "title":"Главная" })
 
-  <body>
-    <div class="wrapper">
-      @@include('html/_header.htm',{})
-      <main class="mainpage">
-        <section id="first-screen" class="mainpage__promo promo">
-          <img
-            class="background"
-            src="@img/mainpage/promo/bg.jpg"
-            alt="background"
-          />
-          <div class="promo__container">
-            <h1 class="promo__header title">
-              Быстровозводимые здания <br class="title__br" />из
-              стеклофибробетона
-              <strong>сроком службы <br />более 100 лет</strong>
-            </h1>
-            <div class="promo__picture">
-              <div class="promo__inner-picture">
-                <div class="promo__build-block promo__build-block_center">
-                  <img
-                    class="promo__build-img"
-                    src="@img/mainpage/promo/illustration/center/192_1 1.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_1"
-                    src="@img/mainpage/promo/illustration/center/cloud_PNG6 1.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_2"
-                    src="@img/mainpage/promo/illustration/center/cloud_PNG6 2.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_9"
-                    src="@img/mainpage/promo/illustration/center/cloud_PNG6 9.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_3"
-                    src="@img/mainpage/promo/illustration/center/cloud_PNG6 3.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_7"
-                    src="@img/mainpage/promo/illustration/center/cloud_PNG6 7.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_8"
-                    src="@img/mainpage/promo/illustration/center/cloud_PNG6 8.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_12"
-                    src="@img/mainpage/promo/illustration/center/cloud_PNG6 12.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_4"
-                    src="@img/mainpage/promo/illustration/center/cloud_PNG6 4.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_5"
-                    src="@img/mainpage/promo/illustration/center/cloud_PNG6 5.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_11"
-                    src="@img/mainpage/promo/illustration/center/cloud_PNG6 11.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_10"
-                    src="@img/mainpage/promo/illustration/center/cloud_PNG6 10.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_6"
-                    src="@img/mainpage/promo/illustration/center/cloud_PNG6 6.png"
-                    alt=""
-                  />
-                </div>
-                <div class="promo__build-block promo__build-block_left">
-                  <img
-                    class="promo__build-img"
-                    src="@img/mainpage/promo/illustration/left/180 1.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_13"
-                    src="@img/mainpage/promo/illustration/left/cloud_PNG6 13.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_14"
-                    src="@img/mainpage/promo/illustration/left/cloud_PNG6 14.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_15"
-                    src="@img/mainpage/promo/illustration/left/cloud_PNG6 15.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_16"
-                    src="@img/mainpage/promo/illustration/left/cloud_PNG6 16.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_23"
-                    src="@img/mainpage/promo/illustration/left/cloud_PNG6 23.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_24"
-                    src="@img/mainpage/promo/illustration/left/cloud_PNG6 24.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_17"
-                    src="@img/mainpage/promo/illustration/left/cloud_PNG6 17.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_18"
-                    src="@img/mainpage/promo/illustration/left/cloud_PNG6 18.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_19"
-                    src="@img/mainpage/promo/illustration/left/cloud_PNG6 19.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_20"
-                    src="@img/mainpage/promo/illustration/left/cloud_PNG6 20.png"
-                    alt=""
-                  />
-                </div>
-                <div class="promo__build-block promo__build-block_right">
-                  <img
-                    class="promo__build-img"
-                    src="@img/mainpage/promo/illustration/right/72 1.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_13"
-                    src="@img/mainpage/promo/illustration/right/cloud_PNG6 13.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_14"
-                    src="@img/mainpage/promo/illustration/right/cloud_PNG6 14.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_15"
-                    src="@img/mainpage/promo/illustration/right/cloud_PNG6 15.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_16"
-                    src="@img/mainpage/promo/illustration/right/cloud_PNG6 16.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_23"
-                    src="@img/mainpage/promo/illustration/right/cloud_PNG6 23.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_17"
-                    src="@img/mainpage/promo/illustration/right/cloud_PNG6 17.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_18"
-                    src="@img/mainpage/promo/illustration/right/cloud_PNG6 18.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_19"
-                    src="@img/mainpage/promo/illustration/right/cloud_PNG6 19.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_20"
-                    src="@img/mainpage/promo/illustration/right/cloud_PNG6 20.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_21"
-                    src="@img/mainpage/promo/illustration/right/cloud_PNG6 21.png"
-                    alt=""
-                  />
-                  <img
-                    class="promo__cloud promo__cloud_22"
-                    src="@img/mainpage/promo/illustration/right/cloud_PNG6 22.png"
-                    alt=""
-                  />
-                </div>
-                <div class="promo__balloon">
-                  <img
-                    class="promo__balloon-img"
-                    src="@img/mainpage/promo/illustration/air_balloon.png"
-                    alt="balloon"
-                  />
-                </div>
-                <div class="promo__balloon promo__balloon_bloor">
-                  <img
-                    class="promo__balloon-img"
-                    src="@img/mainpage/promo/illustration/air_balloon_bloor.png"
-                    alt="balloon"
-                  />
-                </div>
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="mainpage">
+      <section id="first-screen" class="mainpage__promo promo">
+        <img class="background" src="@img/mainpage/promo/bg.jpg" alt="background" />
+        <div class="promo__container">
+          <h1 class="promo__header title">
+            Быстровозводимые здания <br class="title__br" />из
+            стеклофибробетона
+            <strong>сроком службы <br />более 100 лет</strong>
+          </h1>
+          <div class="promo__picture">
+            <div class="promo__inner-picture">
+              <div class="promo__build-block promo__build-block_center">
+                <img class="promo__build-img" src="@img/mainpage/promo/illustration/center/192_1 1.png" alt="" />
+                <img class="promo__cloud promo__cloud_1" src="@img/mainpage/promo/illustration/center/cloud_PNG6 1.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_2" src="@img/mainpage/promo/illustration/center/cloud_PNG6 2.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_9" src="@img/mainpage/promo/illustration/center/cloud_PNG6 9.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_3" src="@img/mainpage/promo/illustration/center/cloud_PNG6 3.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_7" src="@img/mainpage/promo/illustration/center/cloud_PNG6 7.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_8" src="@img/mainpage/promo/illustration/center/cloud_PNG6 8.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_12"
+                  src="@img/mainpage/promo/illustration/center/cloud_PNG6 12.png" alt="" />
+                <img class="promo__cloud promo__cloud_4" src="@img/mainpage/promo/illustration/center/cloud_PNG6 4.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_5" src="@img/mainpage/promo/illustration/center/cloud_PNG6 5.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_11"
+                  src="@img/mainpage/promo/illustration/center/cloud_PNG6 11.png" alt="" />
+                <img class="promo__cloud promo__cloud_10"
+                  src="@img/mainpage/promo/illustration/center/cloud_PNG6 10.png" alt="" />
+                <img class="promo__cloud promo__cloud_6" src="@img/mainpage/promo/illustration/center/cloud_PNG6 6.png"
+                  alt="" />
+              </div>
+              <div class="promo__build-block promo__build-block_left">
+                <img class="promo__build-img" src="@img/mainpage/promo/illustration/left/180 1.png" alt="" />
+                <img class="promo__cloud promo__cloud_13" src="@img/mainpage/promo/illustration/left/cloud_PNG6 13.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_14" src="@img/mainpage/promo/illustration/left/cloud_PNG6 14.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_15" src="@img/mainpage/promo/illustration/left/cloud_PNG6 15.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_16" src="@img/mainpage/promo/illustration/left/cloud_PNG6 16.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_23" src="@img/mainpage/promo/illustration/left/cloud_PNG6 23.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_24" src="@img/mainpage/promo/illustration/left/cloud_PNG6 24.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_17" src="@img/mainpage/promo/illustration/left/cloud_PNG6 17.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_18" src="@img/mainpage/promo/illustration/left/cloud_PNG6 18.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_19" src="@img/mainpage/promo/illustration/left/cloud_PNG6 19.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_20" src="@img/mainpage/promo/illustration/left/cloud_PNG6 20.png"
+                  alt="" />
+              </div>
+              <div class="promo__build-block promo__build-block_right">
+                <img class="promo__build-img" src="@img/mainpage/promo/illustration/right/72 1.png" alt="" />
+                <img class="promo__cloud promo__cloud_13" src="@img/mainpage/promo/illustration/right/cloud_PNG6 13.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_14" src="@img/mainpage/promo/illustration/right/cloud_PNG6 14.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_15" src="@img/mainpage/promo/illustration/right/cloud_PNG6 15.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_16" src="@img/mainpage/promo/illustration/right/cloud_PNG6 16.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_23" src="@img/mainpage/promo/illustration/right/cloud_PNG6 23.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_17" src="@img/mainpage/promo/illustration/right/cloud_PNG6 17.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_18" src="@img/mainpage/promo/illustration/right/cloud_PNG6 18.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_19" src="@img/mainpage/promo/illustration/right/cloud_PNG6 19.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_20" src="@img/mainpage/promo/illustration/right/cloud_PNG6 20.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_21" src="@img/mainpage/promo/illustration/right/cloud_PNG6 21.png"
+                  alt="" />
+                <img class="promo__cloud promo__cloud_22" src="@img/mainpage/promo/illustration/right/cloud_PNG6 22.png"
+                  alt="" />
+              </div>
+              <div class="promo__balloon">
+                <img class="promo__balloon-img" src="@img/mainpage/promo/illustration/air_balloon.png" alt="balloon" />
+              </div>
+              <div class="promo__balloon promo__balloon_bloor">
+                <img class="promo__balloon-img" src="@img/mainpage/promo/illustration/air_balloon_bloor.png"
+                  alt="balloon" />
               </div>
             </div>
-            <div class="promo__leave-request">
-              <a href="" class="button">Оставить заявку</a>
-            </div>
-            <div class="promo__advantages">
-              <div class="advantages">
-                <div class="advantages__item">
-                  <svg
-                    class="advantages__icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M15.1414 0.0332784C11.3941 0.398299 8.18867 2.99721 7.10459 6.54941C6.99464 6.90972 6.86977 7.3998 6.82713 7.63845L6.74955 8.07245L6.3832 8.15054C4.827 8.48222 3.4482 9.23807 2.32134 10.3773C0.308068 12.4126 -0.448773 15.2179 0.260255 18.0172C0.611105 19.4024 1.29318 20.5735 2.37831 21.6535C3.368 22.6385 4.19294 23.1506 5.4907 23.5855C5.86118 23.7097 6.20778 23.8113 6.26095 23.8113C6.33428 23.8113 6.42042 23.4968 6.61756 22.5087L6.87749 21.2061L6.47988 21.0971C5.094 20.717 3.8447 19.6663 3.20324 18.3412C2.77161 17.4495 2.68494 17.0563 2.68357 15.9828C2.68252 15.2196 2.70751 14.9784 2.83218 14.5454C3.25419 13.0794 4.28137 11.8483 5.62446 11.1987C6.50944 10.7707 6.83269 10.7023 8.15904 10.6624L9.32004 10.6275V9.86421C9.32004 7.73842 9.80262 6.31961 11.012 4.88972C11.4191 4.40849 12.2545 3.75306 12.869 3.43291C16.8786 1.34361 21.6787 3.66135 22.5404 8.10285C22.6642 8.74098 22.6369 9.9691 22.477 10.9506C22.3996 11.4256 22.3363 11.8456 22.3363 11.8841C22.3363 11.931 22.719 11.954 23.499 11.954C24.1385 11.954 24.9063 11.9847 25.2053 12.0222C28.0123 12.3747 29.8686 15.0865 29.1723 17.8171C29.1172 18.0333 28.95 18.4599 28.8008 18.7652C28.5816 19.2133 28.4149 19.4355 27.9348 19.9189C27.4471 20.4099 27.24 20.5664 26.7841 20.7886C26.3158 21.0169 26.0558 21.1018 25.2426 21.2922C25.195 21.3034 25.2183 21.7178 25.316 22.5952C25.3947 23.3028 25.4703 23.8913 25.4839 23.9028C25.5502 23.9591 26.7573 23.6683 27.2911 23.4675C30.327 22.3254 32.2981 19.142 31.963 15.9224C31.7734 14.1007 31.0158 12.5601 29.6889 11.298C28.592 10.2547 27.4607 9.68485 25.9338 9.40669L25.3124 9.29349L25.272 8.64206C25.1352 6.43602 24.1903 4.37704 22.5666 2.7467C21.4534 1.62897 20.2818 0.910325 18.8043 0.438981C17.6958 0.0853588 16.2502 -0.0747474 15.1414 0.0332784ZM14.6835 13.9848V14.6399H13.9967H13.31V15.9828V17.3258H13.9967H14.6835V18.0815V18.8372L14.3916 18.9625C14.231 19.0315 13.9444 19.1926 13.7547 19.3205C13.565 19.4484 13.3835 19.5531 13.3513 19.5531C13.2518 19.5531 12.1326 18.8915 12.1326 18.8328C12.1326 18.8022 12.2798 18.5221 12.4596 18.2102C12.6395 17.8982 12.7867 17.6341 12.7867 17.6233C12.7867 17.5867 10.5777 16.3431 10.5127 16.3431C10.4772 16.3431 10.2965 16.6066 10.111 16.9285L9.77365 17.5139L9.2146 17.1906C8.90718 17.0127 8.63273 16.8672 8.60467 16.8672C8.57661 16.8672 8.25872 17.3798 7.89813 18.0063L7.2426 19.1455L7.7906 19.4535C8.09193 19.6229 8.35553 19.7891 8.37633 19.8228C8.39713 19.8565 8.28155 20.1117 8.11953 20.3901C7.85031 20.8526 7.83442 20.9034 7.93475 20.9817C8.07322 21.0896 10.075 22.239 10.1246 22.239C10.1447 22.239 10.2827 22.0187 10.4311 21.7493C10.5796 21.4799 10.7231 21.2459 10.7499 21.2293C10.7767 21.2127 11.0693 21.352 11.4 21.5389L12.0015 21.8787L12.0016 22.6447L12.0018 23.4105L11.3841 23.7747C11.0443 23.975 10.7507 24.1388 10.7317 24.1388C10.7127 24.1388 10.5614 23.9032 10.3956 23.6153C10.2297 23.3273 10.0717 23.0778 10.0444 23.0609C10.0037 23.0357 8.44756 23.8939 7.89387 24.2469L7.74324 24.3429L7.98649 24.7813C8.12032 25.0225 8.26978 25.282 8.31864 25.3581C8.40314 25.4896 8.37875 25.513 7.82127 25.8353L7.23502 26.1741L7.863 27.2691C8.20836 27.8714 8.51336 28.3899 8.54076 28.4214C8.5681 28.4529 8.84838 28.3288 9.16345 28.1457L9.73643 27.8127L10.0231 28.3178C10.1808 28.5955 10.336 28.8494 10.3679 28.882C10.4316 28.9469 12.6559 27.7001 12.6559 27.5995C12.6559 27.5664 12.52 27.3033 12.3539 27.0149C12.1878 26.7265 12.0627 26.4801 12.076 26.4672C12.0891 26.4543 12.3866 26.2782 12.7369 26.0758L13.3739 25.7079L13.6872 25.9224C13.8594 26.0404 14.155 26.2087 14.344 26.2964L14.6875 26.4559L14.6691 27.2135L14.6508 27.9711L13.9804 27.9898L13.31 28.0085V29.3141V30.6197L13.9804 30.6384L14.6508 30.657L14.6695 31.3285L14.6881 32H15.9917H17.2953L17.3139 31.3285L17.3326 30.657L18.003 30.6384L18.6734 30.6197V29.3141V28.0085L18.003 27.9898L17.3326 27.9711L17.3142 27.2071L17.2958 26.4431L17.6593 26.2765C17.8592 26.1848 18.1513 26.0174 18.3084 25.9044C18.6328 25.671 18.5361 25.6474 19.4373 26.1804L19.9722 26.4966L19.6742 27.0235C19.5103 27.3133 19.3873 27.5601 19.4009 27.5721C19.469 27.6319 21.6358 28.8555 21.6736 28.8555C21.6977 28.8555 21.8108 28.6861 21.925 28.4788C22.3114 27.7777 22.243 27.8009 22.8608 28.1604C23.2829 28.4061 23.4127 28.4553 23.4568 28.3865C23.6848 28.0309 24.691 26.2421 24.691 26.1924C24.691 26.1582 24.4711 26.0048 24.2022 25.8516C23.9333 25.6984 23.6994 25.5504 23.6824 25.5228C23.6653 25.4953 23.797 25.2174 23.975 24.9055C24.153 24.5935 24.2986 24.3103 24.2986 24.2762C24.2986 24.2421 23.8791 23.9723 23.3665 23.6766C22.8539 23.381 22.344 23.0849 22.2336 23.0185L22.0328 22.8979L21.6799 23.5205C21.4859 23.8629 21.2953 24.1347 21.2564 24.1245C21.2176 24.1144 20.9074 23.9463 20.5673 23.7511L19.9489 23.3961L19.9543 22.6513L19.9596 21.9065L20.6216 21.5235L21.2836 21.1404L21.5999 21.6976C21.7739 22.004 21.9394 22.2551 21.9677 22.2555C22.0384 22.2565 24.2332 20.9911 24.2332 20.9494C24.2332 20.931 24.0874 20.6678 23.9092 20.3646L23.5852 19.8133L24.1079 19.5092C24.3954 19.3419 24.645 19.1816 24.6626 19.1531C24.698 19.0958 23.4417 16.873 23.3719 16.8694C23.3479 16.8682 23.1042 16.9999 22.8304 17.162C22.5566 17.3242 22.3096 17.4568 22.2816 17.4568C22.2535 17.4568 22.087 17.2081 21.9116 16.9041C21.6198 16.3983 21.5813 16.3575 21.4576 16.4232C21.3111 16.501 19.3013 17.66 19.2847 17.6762C19.2791 17.6816 19.421 17.9335 19.6 18.236C19.867 18.6873 19.9099 18.8005 19.839 18.8676C19.7915 18.9126 19.4901 19.0983 19.169 19.2803L18.5854 19.6112L18.3904 19.4469C18.2832 19.3565 17.9939 19.181 17.7477 19.0568L17.2999 18.8309V18.0783V17.3258H17.9867H18.6734V15.9828V14.6399H17.9867H17.2999V13.9848V13.3297H15.9917H14.6835V13.9848ZM16.5007 21.4236C16.8114 21.5536 17.0803 21.8099 17.2473 22.1354C17.444 22.5184 17.3929 23.1244 17.1327 23.4952C16.5782 24.2855 15.4058 24.2873 14.8529 23.4987C14.5905 23.1242 14.5386 22.5199 14.7361 22.1354C15.0873 21.4511 15.8404 21.1474 16.5007 21.4236Z"
-                      fill="url(#paint0_linear_0_83)"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_0_83"
-                        x1="7.48936"
-                        y1="25.1915"
-                        x2="38.8085"
-                        y2="4.16396e-07"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop stop-color="#63AFCD" />
-                        <stop offset="1" stop-color="#FF374F" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div class="advantages__title">
-                    Современная архитектура и долговечность
-                  </div>
-                </div>
-                <div class="advantages__item">
-                  <svg
-                    class="advantages__icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="32"
-                    viewBox="0 0 26 32"
-                    fill="none"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M6.5 0.655738V1.31148H3.25H0V16.6557V32H13H26V16.6557V1.31148H22.75H19.5V0.655738V0H13H6.5V0.655738ZM16.8772 3.60105C16.8556 4.56636 16.8529 4.58289 16.6642 4.85751C16.5591 5.01062 16.3583 5.19751 16.2181 5.27285C15.9702 5.40603 15.8815 5.40984 13 5.40984C10.1185 5.40984 10.0298 5.40603 9.78186 5.27285C9.64167 5.19751 9.44093 5.01062 9.33578 4.85751C9.14709 4.58289 9.14435 4.56636 9.12281 3.60105L9.10108 2.62295H13H16.8989L16.8772 3.60105ZM6.555 4.48761C6.69577 5.46177 7.09978 6.26472 7.77081 6.904C8.2311 7.34249 8.57178 7.5501 9.21534 7.78426L9.71814 7.96721H13H16.2819L16.7847 7.78426C17.4282 7.5501 17.7689 7.34249 18.2292 6.904C18.9002 6.26472 19.3042 5.46177 19.445 4.48761L19.5155 4H21.4514H23.3873V16.6885V29.377H13H2.61275V16.6885V4H4.5486H6.48452L6.555 4.48761ZM14.5292 15.9019C12.6544 17.8313 11.092 19.4098 11.0571 19.4098C11.0222 19.4098 10.3335 18.7311 9.52677 17.9014L8.05994 16.3931L7.15274 17.3283L6.24561 18.2634L8.65125 20.7382L11.0569 23.213L15.4062 18.7371L19.7555 14.2612L18.8466 13.3277L17.9377 12.394L14.5292 15.9019Z"
-                      fill="url(#paint0_linear_0_87)"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_0_87"
-                        x1="6.08511"
-                        y1="25.1915"
-                        x2="35.4524"
-                        y2="5.99898"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop stop-color="#63AFCD" />
-                        <stop offset="1" stop-color="#FF374F" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div class="advantages__title">
-                    Не требуется разрешение на строительство
-                  </div>
-                </div>
-                <div class="advantages__item">
-                  <svg
-                    class="advantages__icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M1.31148 14.6589V29.3178H0.655738H0V30.6164V31.9151L0.994033 31.958C2.29069 32.014 29.7093 32.014 31.006 31.958L32 31.9151V30.6164V29.3178H31.3443H30.6885V14.6589V0H16H1.31148V14.6589ZM14.6725 8.62192L14.6557 14.6262L9.37134 14.6429L4.08688 14.6597L4.04348 11.9982C4.01954 10.5344 4 7.82491 4 5.97717V2.61766H9.34459H14.6892L14.6725 8.62192ZM28.0656 8.63828V14.6589H22.7541H17.4426V8.63828V2.61766H22.7541H28.0656V8.63828ZM14.6725 23.3463L14.6557 29.2851L9.37134 29.3018L4.08695 29.3186L4.04354 26.6187C4.01967 25.1338 4.00013 22.4538 4.00007 20.6632L4 17.4075H9.34459H14.6892L14.6725 23.3463ZM28.0656 23.3626V29.3178H22.7541H17.4426V23.3626V17.4075H22.7541H28.0656V23.3626Z"
-                      fill="url(#paint0_linear_0_91)"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_0_91"
-                        x1="7.48936"
-                        y1="25.1915"
-                        x2="38.8085"
-                        y2="4.16396e-07"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop stop-color="#63AFCD" />
-                        <stop offset="1" stop-color="#FF374F" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div class="advantages__title">Панорамное остекление</div>
-                </div>
-                <div class="advantages__item">
-                  <svg
-                    class="advantages__icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="31"
-                    viewBox="0 0 32 31"
-                    fill="none"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M23.9865 0.875149C23.9865 1.94716 23.904 2.28548 23.4345 3.14051C22.8111 4.27535 22.6428 4.98569 22.6935 6.26642C22.7366 7.35329 22.8605 7.79276 23.4295 8.87531C23.6615 9.31682 23.881 9.80656 23.9173 9.96363C24.0025 10.3323 24.002 11.1859 23.9165 11.5453C23.8499 11.825 23.7945 11.9447 23.2799 12.9221C22.8775 13.6865 22.7353 14.2352 22.6937 15.1849C22.6367 16.488 22.8241 17.2764 23.4667 18.4359C23.8399 19.1094 23.9865 19.6043 23.9865 20.1913C23.9865 20.8569 23.8774 21.2224 23.3932 22.1802C22.837 23.2802 22.7411 23.618 22.6949 24.6408C22.6371 25.9202 22.8329 26.772 23.4278 27.8289C23.5909 28.1186 23.7243 28.3726 23.7243 28.3934C23.7243 28.4142 18.3864 28.4312 11.8622 28.4312H0V29.6907V30.95L15.9746 30.9866C24.7607 31.0066 31.964 31.0039 31.9821 30.9805C32.0002 30.9571 32.0054 23.977 31.9938 15.469L31.9727 0H27.9796H23.9865V0.875149ZM12.2661 2.3372L11.3289 3.29384L11.8495 3.86506C14.0983 6.33243 15.4466 9.24676 15.8349 12.4787C15.9751 13.6461 15.9294 15.6322 15.7372 16.7224C15.1975 19.7838 13.8031 22.5731 11.749 24.7003C11.5229 24.9345 11.3379 25.1365 11.3379 25.1491C11.3379 25.1617 11.7581 25.5782 12.2718 26.0746L13.2057 26.9773L13.6211 26.546C16.1546 23.9163 17.8128 20.6351 18.4153 17.059C19.2802 11.9254 17.7546 6.55448 14.309 2.60197C14.0504 2.30528 13.6958 1.90908 13.521 1.72155L13.2033 1.38057L12.2661 2.3372ZM29.3277 15.4849V28.3995L27.9408 28.4167L26.5538 28.4337L26.4438 28.0993C26.3834 27.9154 26.1299 27.3651 25.8805 26.8764C25.3841 25.9037 25.2791 25.4806 25.3375 24.687C25.3818 24.0837 25.459 23.8501 25.8931 23.0052C26.4283 21.9638 26.5443 21.5455 26.5888 20.4957C26.6419 19.2453 26.4227 18.3194 25.8497 17.3726C25.4508 16.7135 25.3493 16.4006 25.3126 15.7169C25.2681 14.8861 25.357 14.5384 25.853 13.6043C26.4585 12.4638 26.5743 12.0067 26.5743 10.7569C26.5743 9.53272 26.4558 9.04304 25.9099 8.01222C25.5069 7.25105 25.378 6.86202 25.3366 6.2828C25.2798 5.48856 25.3852 5.06546 25.8815 4.09334C26.131 3.60468 26.3843 3.05439 26.4445 2.87041L26.5538 2.53603L27.9408 2.5531L29.3277 2.57024V15.4849ZM7.50757 6.91393L6.59497 7.79936L6.88726 8.10405C8.03488 9.30032 8.84564 10.8517 9.21893 12.5656C9.38042 13.3072 9.38074 15.0366 9.21952 15.8193C8.88614 17.438 8.08738 18.9991 7.01074 20.1361C6.78634 20.3731 6.61378 20.5789 6.62735 20.5934C6.64091 20.6078 7.06487 21.0234 7.5695 21.517L8.48702 22.4143L8.80651 22.0752C9.21481 21.6418 9.93538 20.7038 10.2373 20.2128C11.3847 18.3468 11.927 16.4359 11.9316 14.243C11.9364 11.8386 11.2805 9.71492 9.92378 7.74244C9.51628 7.15008 8.61632 6.09 8.48636 6.04926C8.44993 6.03783 8.00952 6.42699 7.50757 6.91393ZM2.82765 11.4457L1.88772 12.3576L2.12464 12.6769C2.50351 13.1877 2.6355 13.6358 2.60581 14.3108C2.57815 14.9393 2.43725 15.3358 2.09416 15.7508C1.98767 15.8797 1.90057 15.9969 1.90057 16.0113C1.90057 16.0256 2.31738 16.4424 2.8268 16.9374C3.88843 17.9689 3.7662 17.9454 4.30197 17.2199C5.31851 15.8434 5.56965 14.0979 4.98709 12.4581C4.7988 11.9281 4.36502 11.2013 3.98103 10.7723L3.76758 10.5339L2.82765 11.4457Z"
-                      fill="url(#paint0_linear_0_95)"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_0_95"
-                        x1="7.48936"
-                        y1="24.4043"
-                        x2="38.0222"
-                        y2="-0.947006"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop stop-color="#63AFCD" />
-                        <stop offset="1" stop-color="#FF374F" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div class="advantages__title">
-                    Максимальная энерго<wbr />эффективность
-                  </div>
-                </div>
-                <div class="advantages__item">
-                  <svg
-                    class="advantages__icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="31"
-                    height="31"
-                    viewBox="0 0 31 31"
-                    fill="none"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M7.76176 6.26716C3.52029 9.7289 0.027933 12.5817 0.000966013 12.6068C-0.0445016 12.649 1.52968 14.6262 1.63379 14.6578C1.6595 14.6655 2.07567 14.349 2.55857 13.9544L3.43656 13.2369L3.45243 22.1184L3.46836 31H15.509H27.5497L27.5656 22.1159L27.5814 13.2319L28.4594 13.9511C28.9423 14.3467 29.3585 14.6644 29.3842 14.657C29.4099 14.6496 29.7991 14.1953 30.2489 13.6474C30.9041 12.8496 31.0508 12.6363 30.9861 12.5762C30.759 12.3653 15.6043 0.0230765 15.5441 5.86637e-05C15.5053 -0.0148279 12.0033 2.80542 7.76176 6.26716ZM20.1988 7.20977L24.8534 11.0033V19.6882V28.373H15.509H6.16462V19.6905V11.008L10.8204 7.21208C13.3812 5.12434 15.4916 3.41614 15.5103 3.41614C15.5289 3.41614 17.6388 5.12328 20.1988 7.20977ZM11.4953 11.1702C11.4953 11.4405 11.2927 11.9339 11.0394 12.2804C10.4929 13.0283 10.241 13.7656 10.1952 14.7512C10.1414 15.9109 10.3695 16.7385 10.9952 17.6541C11.1776 17.9211 11.3647 18.2652 11.4111 18.4187C11.5999 19.0445 11.4696 19.6952 11.0345 20.2993C10.555 20.965 10.2576 21.7505 10.1979 22.5091L10.1598 22.9938H11.4831H12.8066L12.8461 22.7592C12.9168 22.339 13.0017 22.1371 13.2638 21.765C13.8826 20.8869 14.1516 20.0557 14.1516 19.022C14.1516 18.0241 13.9166 17.2233 13.3977 16.453C13.2372 16.2147 13.0566 15.9071 12.9966 15.7695C12.7159 15.1264 12.8142 14.4223 13.2803 13.7366C13.8115 12.9554 14.1046 12.1578 14.1422 11.3911L14.1607 11.0158L12.828 10.9989L11.4953 10.982V11.1702ZM18.1736 13.9399C18.1165 14.2924 17.9594 14.6431 17.6893 15.0214C17.1135 15.8279 16.8653 16.6281 16.8653 17.6772C16.8653 18.7526 17.0969 19.4776 17.7396 20.4141C18.0808 20.9113 18.17 21.1737 18.17 21.6803C18.17 22.1869 18.0808 22.4493 17.7396 22.9465C17.2121 23.715 16.9634 24.3774 16.8585 25.2925L16.8137 25.6834H18.1682H19.5227V25.5384C19.5227 25.2537 19.7127 24.763 19.9524 24.4284C20.5717 23.5638 20.8397 22.7337 20.8397 21.6803C20.8397 20.6759 20.5826 19.8372 20.0247 19.022C19.7222 18.5799 19.5846 18.2504 19.545 17.8733C19.4915 17.3621 19.6119 16.9248 19.9362 16.4522C20.5067 15.6212 20.8397 14.7203 20.8397 14.0081V13.6741H19.5282H18.2167L18.1736 13.9399Z"
-                      fill="url(#paint0_linear_0_99)"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_0_99"
-                        x1="7.25532"
-                        y1="24.4043"
-                        x2="37.5957"
-                        y2="4.03384e-07"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop stop-color="#63AFCD" />
-                        <stop offset="1" stop-color="#FF374F" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div class="advantages__title">
-                    Стойкость к любым климатическим условиям
-                  </div>
-                </div>
-                <div class="advantages__item">
-                  <svg
-                    class="advantages__icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="34"
-                    viewBox="0 0 32 34"
-                    fill="none"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M6.83569 0.695297V1.39059H3.41784H0V15.5746V29.7587H6.16693H12.3338L12.3157 28.3507L12.2975 26.9427L7.52261 26.9249L2.74768 26.9071V19.1202V11.3333H15.0452H27.3428V15.5746V19.816H28.7166H30.0904L30.0903 12.8456C30.0902 9.01188 30.0703 4.86617 30.046 3.63292L30.0018 1.39059H26.6282H23.2547V0.695297V0H21.8809H20.5071V0.695297V1.39059H18.4631H16.4191V0.695297V0H15.0452H13.6714V0.695297V1.39059H11.6274H9.58337V0.695297V0H8.20953H6.83569V0.695297ZM6.83569 4.93661V5.6319H8.20953H9.58337V4.93661V4.24131H11.6274H13.6714V4.93661V5.6319H15.0452H16.4191V4.93661V4.24131H18.4631H20.5071V4.93661V5.6319H21.8809H23.2547V4.93661V4.24131H25.2987H27.3428V6.36196V8.48262H15.0452H2.74768V6.36196V4.24131H4.79168H6.83569V4.93661ZM6.85103 15.592L6.8692 17L8.22628 17.0188L9.58337 17.0376V15.6109V14.184H8.20812H6.83294L6.85103 15.592ZM12.331 15.6109V17.0376L13.6881 17.0188L15.0452 17L15.0634 15.592L15.0815 14.184H13.7063H12.331V15.6109ZM17.7747 15.592L17.7929 17L19.15 17.0188L20.5071 17.0376V15.6109V14.184H19.1318H17.7566L17.7747 15.592ZM18.8652 22.3885L14.5095 26.908H16.1344H17.7594V30.454V34H23.2547H28.7501V30.454V26.908H30.3751H32L27.6443 22.3885C25.2487 19.9029 23.2734 17.8691 23.2547 17.8691C23.2361 17.8691 21.2608 19.9029 18.8652 22.3885ZM6.83569 21.2413V22.6667H8.20953H9.58337V21.2413V19.816H8.20953H6.83569V21.2413ZM12.331 21.2398V22.6667H13.7063H15.0815L15.0634 21.2587L15.0452 19.8507L13.6881 19.8319L12.331 19.8131V21.2398ZM24.2944 24.0416C23.7226 24.0522 22.785 24.0522 22.2108 24.0416L21.1668 24.0225L22.1881 22.9221L23.2094 21.8217L24.2718 22.9221L25.3341 24.0225L24.2944 24.0416ZM25.9689 29.0634V31.184H23.2547H20.5406L20.5228 29.1338C20.513 28.0061 20.5197 27.0436 20.5377 26.9949C20.5636 26.9249 21.1334 26.9102 23.2697 26.9246L25.9689 26.9427V29.0634Z"
-                      fill="url(#paint0_linear_0_103)"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_0_103"
-                        x1="7.48936"
-                        y1="26.766"
-                        x2="40.2793"
-                        y2="1.94287"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop stop-color="#63AFCD" />
-                        <stop offset="1" stop-color="#FF374F" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div class="advantages__title">Строительство от 7 дней</div>
-                </div>
-              </div>
-            </div>
-            <a href="#second-screen" class="promo__scroll scroll">
-              <span class="scroll__wrap-icon">
-                <svg class="scroll__icon" width="13" height="19">
-                  <use xlink:href="@img/icons/sprite.svg#mouse"></use>
+          </div>
+          <div class="promo__leave-request">
+            <a href="" class="button">Оставить заявку</a>
+          </div>
+          <div class="promo__advantages">
+            <div class="advantages">
+              <div class="advantages__item">
+                <svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                  viewBox="0 0 32 32" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M15.1414 0.0332784C11.3941 0.398299 8.18867 2.99721 7.10459 6.54941C6.99464 6.90972 6.86977 7.3998 6.82713 7.63845L6.74955 8.07245L6.3832 8.15054C4.827 8.48222 3.4482 9.23807 2.32134 10.3773C0.308068 12.4126 -0.448773 15.2179 0.260255 18.0172C0.611105 19.4024 1.29318 20.5735 2.37831 21.6535C3.368 22.6385 4.19294 23.1506 5.4907 23.5855C5.86118 23.7097 6.20778 23.8113 6.26095 23.8113C6.33428 23.8113 6.42042 23.4968 6.61756 22.5087L6.87749 21.2061L6.47988 21.0971C5.094 20.717 3.8447 19.6663 3.20324 18.3412C2.77161 17.4495 2.68494 17.0563 2.68357 15.9828C2.68252 15.2196 2.70751 14.9784 2.83218 14.5454C3.25419 13.0794 4.28137 11.8483 5.62446 11.1987C6.50944 10.7707 6.83269 10.7023 8.15904 10.6624L9.32004 10.6275V9.86421C9.32004 7.73842 9.80262 6.31961 11.012 4.88972C11.4191 4.40849 12.2545 3.75306 12.869 3.43291C16.8786 1.34361 21.6787 3.66135 22.5404 8.10285C22.6642 8.74098 22.6369 9.9691 22.477 10.9506C22.3996 11.4256 22.3363 11.8456 22.3363 11.8841C22.3363 11.931 22.719 11.954 23.499 11.954C24.1385 11.954 24.9063 11.9847 25.2053 12.0222C28.0123 12.3747 29.8686 15.0865 29.1723 17.8171C29.1172 18.0333 28.95 18.4599 28.8008 18.7652C28.5816 19.2133 28.4149 19.4355 27.9348 19.9189C27.4471 20.4099 27.24 20.5664 26.7841 20.7886C26.3158 21.0169 26.0558 21.1018 25.2426 21.2922C25.195 21.3034 25.2183 21.7178 25.316 22.5952C25.3947 23.3028 25.4703 23.8913 25.4839 23.9028C25.5502 23.9591 26.7573 23.6683 27.2911 23.4675C30.327 22.3254 32.2981 19.142 31.963 15.9224C31.7734 14.1007 31.0158 12.5601 29.6889 11.298C28.592 10.2547 27.4607 9.68485 25.9338 9.40669L25.3124 9.29349L25.272 8.64206C25.1352 6.43602 24.1903 4.37704 22.5666 2.7467C21.4534 1.62897 20.2818 0.910325 18.8043 0.438981C17.6958 0.0853588 16.2502 -0.0747474 15.1414 0.0332784ZM14.6835 13.9848V14.6399H13.9967H13.31V15.9828V17.3258H13.9967H14.6835V18.0815V18.8372L14.3916 18.9625C14.231 19.0315 13.9444 19.1926 13.7547 19.3205C13.565 19.4484 13.3835 19.5531 13.3513 19.5531C13.2518 19.5531 12.1326 18.8915 12.1326 18.8328C12.1326 18.8022 12.2798 18.5221 12.4596 18.2102C12.6395 17.8982 12.7867 17.6341 12.7867 17.6233C12.7867 17.5867 10.5777 16.3431 10.5127 16.3431C10.4772 16.3431 10.2965 16.6066 10.111 16.9285L9.77365 17.5139L9.2146 17.1906C8.90718 17.0127 8.63273 16.8672 8.60467 16.8672C8.57661 16.8672 8.25872 17.3798 7.89813 18.0063L7.2426 19.1455L7.7906 19.4535C8.09193 19.6229 8.35553 19.7891 8.37633 19.8228C8.39713 19.8565 8.28155 20.1117 8.11953 20.3901C7.85031 20.8526 7.83442 20.9034 7.93475 20.9817C8.07322 21.0896 10.075 22.239 10.1246 22.239C10.1447 22.239 10.2827 22.0187 10.4311 21.7493C10.5796 21.4799 10.7231 21.2459 10.7499 21.2293C10.7767 21.2127 11.0693 21.352 11.4 21.5389L12.0015 21.8787L12.0016 22.6447L12.0018 23.4105L11.3841 23.7747C11.0443 23.975 10.7507 24.1388 10.7317 24.1388C10.7127 24.1388 10.5614 23.9032 10.3956 23.6153C10.2297 23.3273 10.0717 23.0778 10.0444 23.0609C10.0037 23.0357 8.44756 23.8939 7.89387 24.2469L7.74324 24.3429L7.98649 24.7813C8.12032 25.0225 8.26978 25.282 8.31864 25.3581C8.40314 25.4896 8.37875 25.513 7.82127 25.8353L7.23502 26.1741L7.863 27.2691C8.20836 27.8714 8.51336 28.3899 8.54076 28.4214C8.5681 28.4529 8.84838 28.3288 9.16345 28.1457L9.73643 27.8127L10.0231 28.3178C10.1808 28.5955 10.336 28.8494 10.3679 28.882C10.4316 28.9469 12.6559 27.7001 12.6559 27.5995C12.6559 27.5664 12.52 27.3033 12.3539 27.0149C12.1878 26.7265 12.0627 26.4801 12.076 26.4672C12.0891 26.4543 12.3866 26.2782 12.7369 26.0758L13.3739 25.7079L13.6872 25.9224C13.8594 26.0404 14.155 26.2087 14.344 26.2964L14.6875 26.4559L14.6691 27.2135L14.6508 27.9711L13.9804 27.9898L13.31 28.0085V29.3141V30.6197L13.9804 30.6384L14.6508 30.657L14.6695 31.3285L14.6881 32H15.9917H17.2953L17.3139 31.3285L17.3326 30.657L18.003 30.6384L18.6734 30.6197V29.3141V28.0085L18.003 27.9898L17.3326 27.9711L17.3142 27.2071L17.2958 26.4431L17.6593 26.2765C17.8592 26.1848 18.1513 26.0174 18.3084 25.9044C18.6328 25.671 18.5361 25.6474 19.4373 26.1804L19.9722 26.4966L19.6742 27.0235C19.5103 27.3133 19.3873 27.5601 19.4009 27.5721C19.469 27.6319 21.6358 28.8555 21.6736 28.8555C21.6977 28.8555 21.8108 28.6861 21.925 28.4788C22.3114 27.7777 22.243 27.8009 22.8608 28.1604C23.2829 28.4061 23.4127 28.4553 23.4568 28.3865C23.6848 28.0309 24.691 26.2421 24.691 26.1924C24.691 26.1582 24.4711 26.0048 24.2022 25.8516C23.9333 25.6984 23.6994 25.5504 23.6824 25.5228C23.6653 25.4953 23.797 25.2174 23.975 24.9055C24.153 24.5935 24.2986 24.3103 24.2986 24.2762C24.2986 24.2421 23.8791 23.9723 23.3665 23.6766C22.8539 23.381 22.344 23.0849 22.2336 23.0185L22.0328 22.8979L21.6799 23.5205C21.4859 23.8629 21.2953 24.1347 21.2564 24.1245C21.2176 24.1144 20.9074 23.9463 20.5673 23.7511L19.9489 23.3961L19.9543 22.6513L19.9596 21.9065L20.6216 21.5235L21.2836 21.1404L21.5999 21.6976C21.7739 22.004 21.9394 22.2551 21.9677 22.2555C22.0384 22.2565 24.2332 20.9911 24.2332 20.9494C24.2332 20.931 24.0874 20.6678 23.9092 20.3646L23.5852 19.8133L24.1079 19.5092C24.3954 19.3419 24.645 19.1816 24.6626 19.1531C24.698 19.0958 23.4417 16.873 23.3719 16.8694C23.3479 16.8682 23.1042 16.9999 22.8304 17.162C22.5566 17.3242 22.3096 17.4568 22.2816 17.4568C22.2535 17.4568 22.087 17.2081 21.9116 16.9041C21.6198 16.3983 21.5813 16.3575 21.4576 16.4232C21.3111 16.501 19.3013 17.66 19.2847 17.6762C19.2791 17.6816 19.421 17.9335 19.6 18.236C19.867 18.6873 19.9099 18.8005 19.839 18.8676C19.7915 18.9126 19.4901 19.0983 19.169 19.2803L18.5854 19.6112L18.3904 19.4469C18.2832 19.3565 17.9939 19.181 17.7477 19.0568L17.2999 18.8309V18.0783V17.3258H17.9867H18.6734V15.9828V14.6399H17.9867H17.2999V13.9848V13.3297H15.9917H14.6835V13.9848ZM16.5007 21.4236C16.8114 21.5536 17.0803 21.8099 17.2473 22.1354C17.444 22.5184 17.3929 23.1244 17.1327 23.4952C16.5782 24.2855 15.4058 24.2873 14.8529 23.4987C14.5905 23.1242 14.5386 22.5199 14.7361 22.1354C15.0873 21.4511 15.8404 21.1474 16.5007 21.4236Z"
+                    fill="url(#paint0_linear_0_83)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_0_83" x1="7.48936" y1="25.1915" x2="38.8085" y2="4.16396e-07"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#63AFCD" />
+                      <stop offset="1" stop-color="#FF374F" />
+                    </linearGradient>
+                  </defs>
                 </svg>
-              </span>
-              <span class="scroll__label">листайте вниз</span>
-            </a>
-          </div>
-        </section>
-        <section id="second-screen" class="mainpage__techs techs techs_dark">
-          <img
-            class="techs__background background"
-            src="@img/mainpage/techs/bg/bg.jpg"
-            alt=""
-            loading="lazy"
-          />
-          <img
-            class="techs__cloud background"
-            src="@img/mainpage/techs/bg/cloud.png"
-            alt=""
-            loading="lazy"
-          />
-          <div class="techs__container">
-            <h2 class="techs__header title">
-              Технологии будущего <strong>для любых целей</strong>
-            </h2>
-            <div class="techs__body">
-              <article class="techs__card card-tech">
-                <h3 class="card-tech__header">для частного домостроения</h3>
-                <div class="card-tech__image">
-                  <img loading="lazy" src="@img/card-tech/1.png" alt="" />
+                <div class="advantages__title">
+                  Современная архитектура и долговечность
                 </div>
-                <div class="card-tech__bottom">
-                  <ul class="card-tech__list">
-                    <li class="card-tech__item">
-                      <svg class="card-tech__icon-item" width="30" height="30">
-                        <use xlink:href="@img/icons/sprite.svg#chip"></use>
-                      </svg>
-                      <span class="card-tech__label-item">Технология</span>
-                    </li>
-                    <li class="card-tech__item">
-                      <svg class="card-tech__icon-item" width="30" height="30">
-                        <use
-                          xlink:href="@img/icons/sprite.svg#floor-plans"
-                        ></use>
-                      </svg>
-                      <span class="card-tech__label-item">Планировки</span>
-                    </li>
-                    <li class="card-tech__item">
-                      <svg class="card-tech__icon-item" width="30" height="30">
-                        <use xlink:href="@img/icons/sprite.svg#document"></use>
-                      </svg>
-                      <span class="card-tech__label-item">Проекты</span>
-                    </li>
-                    <li class="card-tech__item">
-                      <svg class="card-tech__icon-item" width="30" height="30">
-                        <use xlink:href="@img/icons/sprite.svg#home"></use>
-                      </svg>
-                      <span class="card-tech__label-item"
-                        >Варианты дизайна</span
-                      >
-                    </li>
-                  </ul>
-                  <div class="card-tech__button">
-                    <a href="#" class="button button_outline">Подробнее</a>
-                  </div>
+              </div>
+              <div class="advantages__item">
+                <svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" width="26" height="32"
+                  viewBox="0 0 26 32" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.5 0.655738V1.31148H3.25H0V16.6557V32H13H26V16.6557V1.31148H22.75H19.5V0.655738V0H13H6.5V0.655738ZM16.8772 3.60105C16.8556 4.56636 16.8529 4.58289 16.6642 4.85751C16.5591 5.01062 16.3583 5.19751 16.2181 5.27285C15.9702 5.40603 15.8815 5.40984 13 5.40984C10.1185 5.40984 10.0298 5.40603 9.78186 5.27285C9.64167 5.19751 9.44093 5.01062 9.33578 4.85751C9.14709 4.58289 9.14435 4.56636 9.12281 3.60105L9.10108 2.62295H13H16.8989L16.8772 3.60105ZM6.555 4.48761C6.69577 5.46177 7.09978 6.26472 7.77081 6.904C8.2311 7.34249 8.57178 7.5501 9.21534 7.78426L9.71814 7.96721H13H16.2819L16.7847 7.78426C17.4282 7.5501 17.7689 7.34249 18.2292 6.904C18.9002 6.26472 19.3042 5.46177 19.445 4.48761L19.5155 4H21.4514H23.3873V16.6885V29.377H13H2.61275V16.6885V4H4.5486H6.48452L6.555 4.48761ZM14.5292 15.9019C12.6544 17.8313 11.092 19.4098 11.0571 19.4098C11.0222 19.4098 10.3335 18.7311 9.52677 17.9014L8.05994 16.3931L7.15274 17.3283L6.24561 18.2634L8.65125 20.7382L11.0569 23.213L15.4062 18.7371L19.7555 14.2612L18.8466 13.3277L17.9377 12.394L14.5292 15.9019Z"
+                    fill="url(#paint0_linear_0_87)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_0_87" x1="6.08511" y1="25.1915" x2="35.4524" y2="5.99898"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#63AFCD" />
+                      <stop offset="1" stop-color="#FF374F" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="advantages__title">
+                  Не требуется разрешение на строительство
                 </div>
-              </article>
-              <article class="techs__card card-tech">
-                <h3 class="card-tech__header">для бизнеса</h3>
-                <div class="card-tech__image">
-                  <img loading="lazy" src="@img/card-tech/2.png" alt="" />
+              </div>
+              <div class="advantages__item">
+                <svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                  viewBox="0 0 32 32" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.31148 14.6589V29.3178H0.655738H0V30.6164V31.9151L0.994033 31.958C2.29069 32.014 29.7093 32.014 31.006 31.958L32 31.9151V30.6164V29.3178H31.3443H30.6885V14.6589V0H16H1.31148V14.6589ZM14.6725 8.62192L14.6557 14.6262L9.37134 14.6429L4.08688 14.6597L4.04348 11.9982C4.01954 10.5344 4 7.82491 4 5.97717V2.61766H9.34459H14.6892L14.6725 8.62192ZM28.0656 8.63828V14.6589H22.7541H17.4426V8.63828V2.61766H22.7541H28.0656V8.63828ZM14.6725 23.3463L14.6557 29.2851L9.37134 29.3018L4.08695 29.3186L4.04354 26.6187C4.01967 25.1338 4.00013 22.4538 4.00007 20.6632L4 17.4075H9.34459H14.6892L14.6725 23.3463ZM28.0656 23.3626V29.3178H22.7541H17.4426V23.3626V17.4075H22.7541H28.0656V23.3626Z"
+                    fill="url(#paint0_linear_0_91)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_0_91" x1="7.48936" y1="25.1915" x2="38.8085" y2="4.16396e-07"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#63AFCD" />
+                      <stop offset="1" stop-color="#FF374F" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="advantages__title">Панорамное остекление</div>
+              </div>
+              <div class="advantages__item">
+                <svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="31"
+                  viewBox="0 0 32 31" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M23.9865 0.875149C23.9865 1.94716 23.904 2.28548 23.4345 3.14051C22.8111 4.27535 22.6428 4.98569 22.6935 6.26642C22.7366 7.35329 22.8605 7.79276 23.4295 8.87531C23.6615 9.31682 23.881 9.80656 23.9173 9.96363C24.0025 10.3323 24.002 11.1859 23.9165 11.5453C23.8499 11.825 23.7945 11.9447 23.2799 12.9221C22.8775 13.6865 22.7353 14.2352 22.6937 15.1849C22.6367 16.488 22.8241 17.2764 23.4667 18.4359C23.8399 19.1094 23.9865 19.6043 23.9865 20.1913C23.9865 20.8569 23.8774 21.2224 23.3932 22.1802C22.837 23.2802 22.7411 23.618 22.6949 24.6408C22.6371 25.9202 22.8329 26.772 23.4278 27.8289C23.5909 28.1186 23.7243 28.3726 23.7243 28.3934C23.7243 28.4142 18.3864 28.4312 11.8622 28.4312H0V29.6907V30.95L15.9746 30.9866C24.7607 31.0066 31.964 31.0039 31.9821 30.9805C32.0002 30.9571 32.0054 23.977 31.9938 15.469L31.9727 0H27.9796H23.9865V0.875149ZM12.2661 2.3372L11.3289 3.29384L11.8495 3.86506C14.0983 6.33243 15.4466 9.24676 15.8349 12.4787C15.9751 13.6461 15.9294 15.6322 15.7372 16.7224C15.1975 19.7838 13.8031 22.5731 11.749 24.7003C11.5229 24.9345 11.3379 25.1365 11.3379 25.1491C11.3379 25.1617 11.7581 25.5782 12.2718 26.0746L13.2057 26.9773L13.6211 26.546C16.1546 23.9163 17.8128 20.6351 18.4153 17.059C19.2802 11.9254 17.7546 6.55448 14.309 2.60197C14.0504 2.30528 13.6958 1.90908 13.521 1.72155L13.2033 1.38057L12.2661 2.3372ZM29.3277 15.4849V28.3995L27.9408 28.4167L26.5538 28.4337L26.4438 28.0993C26.3834 27.9154 26.1299 27.3651 25.8805 26.8764C25.3841 25.9037 25.2791 25.4806 25.3375 24.687C25.3818 24.0837 25.459 23.8501 25.8931 23.0052C26.4283 21.9638 26.5443 21.5455 26.5888 20.4957C26.6419 19.2453 26.4227 18.3194 25.8497 17.3726C25.4508 16.7135 25.3493 16.4006 25.3126 15.7169C25.2681 14.8861 25.357 14.5384 25.853 13.6043C26.4585 12.4638 26.5743 12.0067 26.5743 10.7569C26.5743 9.53272 26.4558 9.04304 25.9099 8.01222C25.5069 7.25105 25.378 6.86202 25.3366 6.2828C25.2798 5.48856 25.3852 5.06546 25.8815 4.09334C26.131 3.60468 26.3843 3.05439 26.4445 2.87041L26.5538 2.53603L27.9408 2.5531L29.3277 2.57024V15.4849ZM7.50757 6.91393L6.59497 7.79936L6.88726 8.10405C8.03488 9.30032 8.84564 10.8517 9.21893 12.5656C9.38042 13.3072 9.38074 15.0366 9.21952 15.8193C8.88614 17.438 8.08738 18.9991 7.01074 20.1361C6.78634 20.3731 6.61378 20.5789 6.62735 20.5934C6.64091 20.6078 7.06487 21.0234 7.5695 21.517L8.48702 22.4143L8.80651 22.0752C9.21481 21.6418 9.93538 20.7038 10.2373 20.2128C11.3847 18.3468 11.927 16.4359 11.9316 14.243C11.9364 11.8386 11.2805 9.71492 9.92378 7.74244C9.51628 7.15008 8.61632 6.09 8.48636 6.04926C8.44993 6.03783 8.00952 6.42699 7.50757 6.91393ZM2.82765 11.4457L1.88772 12.3576L2.12464 12.6769C2.50351 13.1877 2.6355 13.6358 2.60581 14.3108C2.57815 14.9393 2.43725 15.3358 2.09416 15.7508C1.98767 15.8797 1.90057 15.9969 1.90057 16.0113C1.90057 16.0256 2.31738 16.4424 2.8268 16.9374C3.88843 17.9689 3.7662 17.9454 4.30197 17.2199C5.31851 15.8434 5.56965 14.0979 4.98709 12.4581C4.7988 11.9281 4.36502 11.2013 3.98103 10.7723L3.76758 10.5339L2.82765 11.4457Z"
+                    fill="url(#paint0_linear_0_95)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_0_95" x1="7.48936" y1="24.4043" x2="38.0222" y2="-0.947006"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#63AFCD" />
+                      <stop offset="1" stop-color="#FF374F" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="advantages__title">
+                  Максимальная энерго<wbr />эффективность
                 </div>
-                <div class="card-tech__bottom">
-                  <ul class="card-tech__list">
-                    <li class="card-tech__item">
-                      <svg class="card-tech__icon-item" width="30" height="30">
-                        <use xlink:href="@img/icons/sprite.svg#chip"></use>
-                      </svg>
-                      <span class="card-tech__label-item">Технология</span>
-                    </li>
-                    <li class="card-tech__item">
-                      <svg class="card-tech__icon-item" width="30" height="30">
-                        <use xlink:href="@img/icons/sprite.svg#forest"></use>
-                      </svg>
-                      <span class="card-tech__label-item"
-                        >Варианты применения</span
-                      >
-                    </li>
-                    <li class="card-tech__item">
-                      <svg class="card-tech__icon-item" width="30" height="30">
-                        <use xlink:href="@img/icons/sprite.svg#document"></use>
-                      </svg>
-                      <span class="card-tech__label-item">Проекты</span>
-                    </li>
-                  </ul>
-                  <div class="card-tech__button">
-                    <a href="#" class="button button_outline">Подробнее</a>
-                  </div>
+              </div>
+              <div class="advantages__item">
+                <svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" width="31" height="31"
+                  viewBox="0 0 31 31" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.76176 6.26716C3.52029 9.7289 0.027933 12.5817 0.000966013 12.6068C-0.0445016 12.649 1.52968 14.6262 1.63379 14.6578C1.6595 14.6655 2.07567 14.349 2.55857 13.9544L3.43656 13.2369L3.45243 22.1184L3.46836 31H15.509H27.5497L27.5656 22.1159L27.5814 13.2319L28.4594 13.9511C28.9423 14.3467 29.3585 14.6644 29.3842 14.657C29.4099 14.6496 29.7991 14.1953 30.2489 13.6474C30.9041 12.8496 31.0508 12.6363 30.9861 12.5762C30.759 12.3653 15.6043 0.0230765 15.5441 5.86637e-05C15.5053 -0.0148279 12.0033 2.80542 7.76176 6.26716ZM20.1988 7.20977L24.8534 11.0033V19.6882V28.373H15.509H6.16462V19.6905V11.008L10.8204 7.21208C13.3812 5.12434 15.4916 3.41614 15.5103 3.41614C15.5289 3.41614 17.6388 5.12328 20.1988 7.20977ZM11.4953 11.1702C11.4953 11.4405 11.2927 11.9339 11.0394 12.2804C10.4929 13.0283 10.241 13.7656 10.1952 14.7512C10.1414 15.9109 10.3695 16.7385 10.9952 17.6541C11.1776 17.9211 11.3647 18.2652 11.4111 18.4187C11.5999 19.0445 11.4696 19.6952 11.0345 20.2993C10.555 20.965 10.2576 21.7505 10.1979 22.5091L10.1598 22.9938H11.4831H12.8066L12.8461 22.7592C12.9168 22.339 13.0017 22.1371 13.2638 21.765C13.8826 20.8869 14.1516 20.0557 14.1516 19.022C14.1516 18.0241 13.9166 17.2233 13.3977 16.453C13.2372 16.2147 13.0566 15.9071 12.9966 15.7695C12.7159 15.1264 12.8142 14.4223 13.2803 13.7366C13.8115 12.9554 14.1046 12.1578 14.1422 11.3911L14.1607 11.0158L12.828 10.9989L11.4953 10.982V11.1702ZM18.1736 13.9399C18.1165 14.2924 17.9594 14.6431 17.6893 15.0214C17.1135 15.8279 16.8653 16.6281 16.8653 17.6772C16.8653 18.7526 17.0969 19.4776 17.7396 20.4141C18.0808 20.9113 18.17 21.1737 18.17 21.6803C18.17 22.1869 18.0808 22.4493 17.7396 22.9465C17.2121 23.715 16.9634 24.3774 16.8585 25.2925L16.8137 25.6834H18.1682H19.5227V25.5384C19.5227 25.2537 19.7127 24.763 19.9524 24.4284C20.5717 23.5638 20.8397 22.7337 20.8397 21.6803C20.8397 20.6759 20.5826 19.8372 20.0247 19.022C19.7222 18.5799 19.5846 18.2504 19.545 17.8733C19.4915 17.3621 19.6119 16.9248 19.9362 16.4522C20.5067 15.6212 20.8397 14.7203 20.8397 14.0081V13.6741H19.5282H18.2167L18.1736 13.9399Z"
+                    fill="url(#paint0_linear_0_99)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_0_99" x1="7.25532" y1="24.4043" x2="37.5957" y2="4.03384e-07"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#63AFCD" />
+                      <stop offset="1" stop-color="#FF374F" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="advantages__title">
+                  Стойкость к любым климатическим условиям
                 </div>
-              </article>
+              </div>
+              <div class="advantages__item">
+                <svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="34"
+                  viewBox="0 0 32 34" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.83569 0.695297V1.39059H3.41784H0V15.5746V29.7587H6.16693H12.3338L12.3157 28.3507L12.2975 26.9427L7.52261 26.9249L2.74768 26.9071V19.1202V11.3333H15.0452H27.3428V15.5746V19.816H28.7166H30.0904L30.0903 12.8456C30.0902 9.01188 30.0703 4.86617 30.046 3.63292L30.0018 1.39059H26.6282H23.2547V0.695297V0H21.8809H20.5071V0.695297V1.39059H18.4631H16.4191V0.695297V0H15.0452H13.6714V0.695297V1.39059H11.6274H9.58337V0.695297V0H8.20953H6.83569V0.695297ZM6.83569 4.93661V5.6319H8.20953H9.58337V4.93661V4.24131H11.6274H13.6714V4.93661V5.6319H15.0452H16.4191V4.93661V4.24131H18.4631H20.5071V4.93661V5.6319H21.8809H23.2547V4.93661V4.24131H25.2987H27.3428V6.36196V8.48262H15.0452H2.74768V6.36196V4.24131H4.79168H6.83569V4.93661ZM6.85103 15.592L6.8692 17L8.22628 17.0188L9.58337 17.0376V15.6109V14.184H8.20812H6.83294L6.85103 15.592ZM12.331 15.6109V17.0376L13.6881 17.0188L15.0452 17L15.0634 15.592L15.0815 14.184H13.7063H12.331V15.6109ZM17.7747 15.592L17.7929 17L19.15 17.0188L20.5071 17.0376V15.6109V14.184H19.1318H17.7566L17.7747 15.592ZM18.8652 22.3885L14.5095 26.908H16.1344H17.7594V30.454V34H23.2547H28.7501V30.454V26.908H30.3751H32L27.6443 22.3885C25.2487 19.9029 23.2734 17.8691 23.2547 17.8691C23.2361 17.8691 21.2608 19.9029 18.8652 22.3885ZM6.83569 21.2413V22.6667H8.20953H9.58337V21.2413V19.816H8.20953H6.83569V21.2413ZM12.331 21.2398V22.6667H13.7063H15.0815L15.0634 21.2587L15.0452 19.8507L13.6881 19.8319L12.331 19.8131V21.2398ZM24.2944 24.0416C23.7226 24.0522 22.785 24.0522 22.2108 24.0416L21.1668 24.0225L22.1881 22.9221L23.2094 21.8217L24.2718 22.9221L25.3341 24.0225L24.2944 24.0416ZM25.9689 29.0634V31.184H23.2547H20.5406L20.5228 29.1338C20.513 28.0061 20.5197 27.0436 20.5377 26.9949C20.5636 26.9249 21.1334 26.9102 23.2697 26.9246L25.9689 26.9427V29.0634Z"
+                    fill="url(#paint0_linear_0_103)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_0_103" x1="7.48936" y1="26.766" x2="40.2793" y2="1.94287"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#63AFCD" />
+                      <stop offset="1" stop-color="#FF374F" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="advantages__title">Строительство от 7 дней</div>
+              </div>
             </div>
           </div>
-        </section>
-        <section class="main__page__feedback feedback">
-          <img
-            class="feedback__background background"
-            src="@img/mainpage/feedback/bg.jpg"
-            alt=""
-            loading="lazy"
-          />
-          <div class="feedback__container">
-            <div class="feedback__wrap">
-              <div class="feedback__contacts">
-                <div class="feedback__title">Контакты</div>
-                <address class="feedback__address">
-                  <a href="#" class="feedback__contact">
-                    <svg width="15" height="21">
-                      <use
-                        xlink:href="@img/icons/sprite.svg#maps-and-flags"
-                      ></use>
+          <a href="#second-screen" class="promo__scroll scroll">
+            <span class="scroll__wrap-icon">
+              <svg class="scroll__icon" width="13" height="19">
+                <use xlink:href="@img/icons/sprite.svg#mouse"></use>
+              </svg>
+            </span>
+            <span class="scroll__label">листайте вниз</span>
+          </a>
+        </div>
+      </section>
+      <section id="second-screen" class="mainpage__techs techs techs_dark">
+        <img class="techs__background background" src="@img/mainpage/techs/bg/bg.jpg" alt="" loading="lazy" />
+        <img class="techs__cloud background" src="@img/mainpage/techs/bg/cloud.png" alt="" loading="lazy" />
+        <div class="techs__container">
+          <h2 class="techs__header title">
+            Технологии будущего <strong>для любых целей</strong>
+          </h2>
+          <div class="techs__body">
+            <article class="techs__card card-tech">
+              <h3 class="card-tech__header">для частного домостроения</h3>
+              <div class="card-tech__image">
+                <img loading="lazy" src="@img/card-tech/1.png" alt="" />
+              </div>
+              <div class="card-tech__bottom">
+                <ul class="card-tech__list">
+                  <li class="card-tech__item">
+                    <svg class="card-tech__icon-item" width="30" height="30">
+                      <use xlink:href="@img/icons/sprite.svg#chip"></use>
                     </svg>
-                    <span>г. Москва, ул. Печерского Павла 321</span>
-                  </a>
-                  <a href="tel:+380406576909" class="feedback__contact">
-                    <svg width="18" height="18">
+                    <span class="card-tech__label-item">Технология</span>
+                  </li>
+                  <li class="card-tech__item">
+                    <svg class="card-tech__icon-item" width="30" height="30">
+                      <use xlink:href="@img/icons/sprite.svg#floor-plans"></use>
+                    </svg>
+                    <span class="card-tech__label-item">Планировки</span>
+                  </li>
+                  <li class="card-tech__item">
+                    <svg class="card-tech__icon-item" width="30" height="30">
+                      <use xlink:href="@img/icons/sprite.svg#document"></use>
+                    </svg>
+                    <span class="card-tech__label-item">Проекты</span>
+                  </li>
+                  <li class="card-tech__item">
+                    <svg class="card-tech__icon-item" width="30" height="30">
+                      <use xlink:href="@img/icons/sprite.svg#home"></use>
+                    </svg>
+                    <span class="card-tech__label-item">Варианты дизайна</span>
+                  </li>
+                </ul>
+                <div class="card-tech__button">
+                  <a href="#" class="button button_outline">Подробнее</a>
+                </div>
+              </div>
+            </article>
+            <article class="techs__card card-tech">
+              <h3 class="card-tech__header">для бизнеса</h3>
+              <div class="card-tech__image">
+                <img loading="lazy" src="@img/card-tech/2.png" alt="" />
+              </div>
+              <div class="card-tech__bottom">
+                <ul class="card-tech__list">
+                  <li class="card-tech__item">
+                    <svg class="card-tech__icon-item" width="30" height="30">
+                      <use xlink:href="@img/icons/sprite.svg#chip"></use>
+                    </svg>
+                    <span class="card-tech__label-item">Технология</span>
+                  </li>
+                  <li class="card-tech__item">
+                    <svg class="card-tech__icon-item" width="30" height="30">
+                      <use xlink:href="@img/icons/sprite.svg#forest"></use>
+                    </svg>
+                    <span class="card-tech__label-item">Варианты применения</span>
+                  </li>
+                  <li class="card-tech__item">
+                    <svg class="card-tech__icon-item" width="30" height="30">
+                      <use xlink:href="@img/icons/sprite.svg#document"></use>
+                    </svg>
+                    <span class="card-tech__label-item">Проекты</span>
+                  </li>
+                </ul>
+                <div class="card-tech__button">
+                  <a href="#" class="button button_outline">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="main__page__feedback feedback">
+        <img class="feedback__background background" src="@img/mainpage/feedback/bg.jpg" alt="" loading="lazy" />
+        <div class="feedback__container">
+          <div class="feedback__wrap">
+            <div class="feedback__contacts">
+              <div class="feedback__title">Контакты</div>
+              <address class="feedback__address">
+                <a href="#" class="feedback__contact">
+                  <svg width="15" height="21">
+                    <use xlink:href="@img/icons/sprite.svg#maps-and-flags"></use>
+                  </svg>
+                  <span>г. Москва, ул. Печерского Павла 321</span>
+                </a>
+                <a href="tel:+380406576909" class="feedback__contact">
+                  <svg width="18" height="18">
+                    <use xlink:href="@img/icons/sprite.svg#phone"></use>
+                  </svg>
+                  <span>+38 (040) 657-69-09</span>
+                </a>
+                <a href="mailto:cubax_info@com" class="feedback__contact">
+                  <svg width="20" height="14">
+                    <use xlink:href="@img/icons/sprite.svg#mail"></use>
+                  </svg>
+                  <span>cubax_info@com</span>
+                </a>
+              </address>
+            </div>
+            <div class="feedback__box">
+              <div class="feedback__decor-box"></div>
+              <div class="feedback__inner-box">
+                <h2 class="feedback__header title">
+                  <strong>Возникли вопросы?</strong><br />Оставьте заявку и
+                  наши менеджеры связуться с вами в ближайшее время
+                </h2>
+                <form action="#" class="feedback__form">
+                  <div class="feedback__name input-block">
+                    <input class="input-block__input" type="text" name="name" placeholder="Ваше имя" required />
+                    <svg class="input-block__icon" width="16" height="16">
+                      <use xlink:href="@img/icons/sprite.svg#avatar"></use>
+                    </svg>
+                  </div>
+                  <div class="feedback__tel input-block">
+                    <input class="input-block__input" type="tel" name="tel" placeholder="Контактный номер телефона"
+                      required />
+                    <svg class="input-block__icon" width="16" height="16">
                       <use xlink:href="@img/icons/sprite.svg#phone"></use>
                     </svg>
-                    <span>+38 (040) 657-69-09</span>
-                  </a>
-                  <a href="mailto:cubax_info@com" class="feedback__contact">
-                    <svg width="20" height="14">
-                      <use xlink:href="@img/icons/sprite.svg#mail"></use>
-                    </svg>
-                    <span>cubax_info@com</span>
-                  </a>
-                </address>
-              </div>
-              <div class="feedback__box">
-                <div class="feedback__decor-box"></div>
-                <div class="feedback__inner-box">
-                  <h2 class="feedback__header title">
-                    <strong>Возникли вопросы?</strong><br />Оставьте заявку и
-                    наши менеджеры связуться с вами в ближайшее время
-                  </h2>
-                  <form action="#" class="feedback__form">
-                    <div class="feedback__name input-block">
-                      <input
-                        class="input-block__input"
-                        type="text"
-                        name="name"
-                        placeholder="Ваше имя"
-                        required
-                      />
-                      <svg class="input-block__icon" width="16" height="16">
-                        <use xlink:href="@img/icons/sprite.svg#avatar"></use>
-                      </svg>
-                    </div>
-                    <div class="feedback__tel input-block">
-                      <input
-                        class="input-block__input"
-                        type="tel"
-                        name="tel"
-                        placeholder="Контактный номер телефона"
-                        required
-                      />
-                      <svg class="input-block__icon" width="16" height="16">
-                        <use xlink:href="@img/icons/sprite.svg#phone"></use>
-                      </svg>
-                    </div>
-                    <div class="feedback__consent">
-                      <input
-                        class="sr-only"
-                        type="checkbox"
-                        name="consent"
-                        id="consent_checkbox"
-                        required
-                      />
-                      <label for="consent_checkbox">
-                        <span>
-                          <svg class="" width="16" height="16">
-                            <use
-                              xlink:href="@img/icons/sprite.svg#check-mark"
-                            ></use>
-                          </svg>
-                        </span>
-                        <span
-                          >Даю согласие на обработку персональных данных</span
-                        >
-                      </label>
-                    </div>
-                    <div class="feedback__submit">
-                      <button class="button">Оставить заявку</button>
-                    </div>
-                  </form>
-                </div>
+                  </div>
+                  <div class="feedback__consent">
+                    <input class="sr-only" type="checkbox" name="consent" id="consent_checkbox" required />
+                    <label for="consent_checkbox">
+                      <span>
+                        <svg class="" width="16" height="16">
+                          <use xlink:href="@img/icons/sprite.svg#check-mark"></use>
+                        </svg>
+                      </span>
+                      <span>Даю согласие на обработку персональных данных</span>
+                    </label>
+                  </div>
+                  <div class="feedback__submit">
+                    <button class="button">Оставить заявку</button>
+                  </div>
+                </form>
               </div>
             </div>
-            <a href="#first-screen" class="feedback__scroll scroll scroll_up">
-              <span class="scroll__wrap-icon">
-                <svg class="scroll__icon" width="10" height="6">
-                  <use xlink:href="@img/icons/sprite.svg#arrow-up"></use>
-                </svg>
-              </span>
-              <span
-                class="scroll__label"
-                data-label="подняться вверх"
-                data-tiny-label="вверх"
-              ></span>
-            </a>
-            <img
-              loading="lazy"
-              width="259"
-              height="129"
-              class="feedback__wing"
-              src="@img/mainpage/feedback/wing.png"
-              alt="wing"
-            />
           </div>
-        </section>
-      </main>
-      @@include('html/_footer.htm',{})
-    </div>
-    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
-  </body>
+          <a href="#first-screen" class="feedback__scroll scroll scroll_up">
+            <span class="scroll__wrap-icon">
+              <svg class="scroll__icon" width="10" height="6">
+                <use xlink:href="@img/icons/sprite.svg#arrow-up"></use>
+              </svg>
+            </span>
+            <span class="scroll__label" data-label="подняться вверх" data-tiny-label="вверх"></span>
+          </a>
+          <img loading="lazy" width="259" height="129" class="feedback__wing" src="@img/mainpage/feedback/wing.png"
+            alt="wing" />
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+</body>
+
 </html>

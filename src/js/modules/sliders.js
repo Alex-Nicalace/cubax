@@ -84,6 +84,50 @@ function initSliders() {
       });
     }
   }
+
+  /**
+   * @type {HTMLElement}
+   */
+  const projectSlider = document.querySelector('.projects__slider');
+  if (projectSlider) {
+    // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    new Swiper(projectSlider, {
+      // Указываем скласс нужного слайдера
+      modules: [Navigation, Lazy, Keyboard],
+      slidesPerView: 1,
+      spaceBetween: 20,
+      lazy: true,
+      // позволяет стрелками управлять слайдером
+      keyboard: true,
+      breakpoints: {
+        479.98: {
+          slidesPerView: 'auto',
+        },
+      },
+      navigation: {
+        nextEl: '.projects__button-slide_next',
+        prevEl: '.projects__button-slide_prev',
+      },
+    });
+    window.addEventListener('resize', setWidthSlider);
+    setWidthSlider();
+    function setWidthSlider() {
+      const clientWidth = document.documentElement.clientWidth;
+      const buttonNext = document.querySelector('.projects__button-slide_next');
+      if (clientWidth <= 479.98) {
+        projectSlider.style.width = '';
+        buttonNext.style.right = '';
+        return;
+      }
+      const offset = projectSlider.getBoundingClientRect().left;
+      projectSlider.style.width = clientWidth - offset + 'px';
+
+      const sizeShadow =
+        getComputedStyle(buttonNext)?.boxShadow.match(/\d+(\.\d+)?(?=px$)/);
+      buttonNext.style.right = offset + (sizeShadow && +sizeShadow[0]) + 'px';
+    }
+  }
 }
 
 window.addEventListener('load', function (e) {

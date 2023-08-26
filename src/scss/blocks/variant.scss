@@ -1,0 +1,119 @@
+.variant {
+   position: relative;
+
+   // .variant_dark
+   &_dark {}
+
+   // .variant__background
+   &__background {}
+
+   // .variant__cloud
+   &__cloud {
+      width: 130%;
+      z-index: -1;
+      animation: tech-cloud 16s ease-in-out infinite alternate;
+   }
+
+   // .variant__container
+   &__container {
+      @include adaptiveValue("padding-top", 180, 120);
+      @include adaptiveValue("padding-bottom", 130, 70);
+   }
+
+   // .variant__header
+   &__header {
+      text-align: center;
+
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 40, 20);
+      }
+   }
+
+   // .variant__descr
+   &__descr {
+      text-align: center;
+      line-height: rem(28);
+
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 40, 20);
+      }
+   }
+
+   // .variant__list
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(28) rem(23);
+
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 75, 60);
+      }
+   }
+
+   // .variant__item
+   &__item {
+      min-width: rem(290);
+      flex: 1 0 percent(491, 1522);
+      display: grid;
+      @include adaptiveValue("row-gap", 37, 17);
+   }
+
+   &__img-big {
+      border-radius: rem(30);
+      @include adaptiveValue("height", 336, 270);
+      overflow: hidden;
+
+      @media (any-hover: hover) {
+         &:hover {
+            img {
+               transform: scale(1.2);
+            }
+         }
+      }
+   }
+
+   // .variant__img-apartment
+   &__img-apartment {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease 0s;
+      // aspect-ratio: 491/336;
+   }
+
+   // .variant__label
+   &__label {
+      display: grid;
+      justify-items: center;
+      @include adaptiveValue("row-gap", 28, 8);
+
+      font-size: rem(16);
+      font-weight: 700;
+      line-height: rem(24);
+      letter-spacing: rem(0.64);
+
+      @media (max-width:$mobileSmall) {
+         line-height: rem(16);
+      }
+
+      &:before {
+         content: '';
+         height: rem(1);
+         width: rem(47);
+         background-color: $color-steel-blue;
+      }
+   }
+
+   // .variant__text
+   &__text {
+      text-align: center;
+      font-size: rem(26);
+      font-weight: 300;
+      line-height: rem(34);
+      text-transform: uppercase;
+
+      &:not(:first-child) {
+         @include adaptiveValue("margin-top", 90, 55);
+      }
+   }
+}

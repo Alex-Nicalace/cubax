@@ -2,8 +2,10 @@
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   text-align: left;
    // gap: rem(20);
    margin: var(--card-advantage-container-m, rem(-10));
+
    // .advantages__item
    &__item {
       margin: var(--card-advantage-item-m, rem(10));
@@ -21,19 +23,23 @@
       border-radius: rem(30);
       background-color: $color-white;
    }
+
    // .advantages__icon
    &__icon {
       &:not(:last-child) {
          margin-bottom: rem(20);
       }
+
       @media (max-width: $mobile) {
          width: rem(20);
          height: rem(20);
+
          &:not(:last-child) {
             margin-bottom: rem(10);
          }
       }
    }
+
    // .advantages__title
    &__title {
       @extend %small;

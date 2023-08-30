@@ -1,5 +1,5 @@
 input[type="checkbox"] {
-   & + label {
+   &+label {
       color: $color-blue-steel;
       display: flex;
       // align-items: center;
@@ -34,7 +34,8 @@ input[type="checkbox"] {
          letter-spacing: rem(0.48);
       }
    }
-   &:checked + label {
+
+   &:checked+label {
       span:nth-child(1) {
          svg {
             opacity: 1;

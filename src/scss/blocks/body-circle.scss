@@ -1,0 +1,22 @@
+.body-circle {
+  // display: none;
+  max-width: rem(534);
+  width: percent(534, 669);
+  min-width: rem(290);
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  // padding-top: percent(75, 669);
+  @include adaptiveValue('padding-top', 75, 0, $containerWidth, 600);
+  @include adaptiveValue('padding-bottom', 125, 0, $containerWidth, 600);
+  // .body-circle__title
+  &__title {
+  }
+  // .body-circle__button
+  &__button {
+  }
+}

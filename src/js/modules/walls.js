@@ -1,97 +1,182 @@
-/**
- * @type {HTMLCanvasElement}
- */
-const canvasEl = document.querySelector('.walls__canvas');
-if (canvasEl) {
-  const containerEl = canvasEl.offsetParent;
+import {
+  getPointAtDistanceInDirection,
+  getPointOnMidPerpendicular,
+  calculatePointOnCircle,
+} from './reused/geometry-utils.js';
+import { getOffsetTop, getOffsetLeft } from './reused/metrics-utils.js';
 
-  const resizeObserver = new ResizeObserver(() => {
-    drawLines();
-  });
-  resizeObserver.observe(containerEl);
-
+class DrawOnCanvas {
   /**
-   * Рисует линии на канве, соединяющие компоненты и описание компонента
+   *
+   * @param {string} selector
+   * @param {function(CanvasRenderingContext2D, string, string): void} callback
+   * @param {string[][]} segments
    */
-  function drawLines() {
-    const context = canvasEl.getContext('2d');
-    canvasEl.width = containerEl.offsetWidth;
-    canvasEl.height = containerEl.offsetHeight;
+  constructor(selector, cbDraw, segments) {
+    /**
+     * @type {HTMLCanvasElement | null}
+     */
+    this.canvasEl = document.querySelector(selector);
 
-    drawLine('.walls__point_1', '.walls__component_num_1 .component__mark');
-    drawLine('.walls__point_2', '.walls__component_num_1 .component__mark');
-    drawLine('.walls__point_3', '.walls__component_num_2 .component__mark');
+    if (!this.canvasEl) return this;
 
     /**
-     * Рисует линию на канве, соединяющую компонент и описание компонента
-     * @param {string} selectorFrom
-     * @param {string} selectorTo
+     * @type {HTMLElement}
      */
-    function drawLine(selectorFrom, selectorTo) {
-      const elFrom = document.querySelector(selectorFrom);
-      const elTo = document.querySelector(selectorTo);
+    this.containerEl = this.canvasEl.offsetParent;
 
-      const elPosFrom = {
-        top: getOffsetTop(elFrom, containerEl) + elFrom.offsetHeight / 2,
-        left: getOffsetLeft(elFrom, containerEl) + elFrom.offsetWidth / 2,
-      };
-      const elPosTo = {
-        top: getOffsetTop(elTo, containerEl) + elTo.offsetHeight / 2,
-        left: getOffsetLeft(elTo, containerEl) + elTo.offsetWidth / 2,
-      };
-      // <сокращение длины линии на радиус круга, чтобы линия не перекрывала круг>
-      const dLeft = elPosTo.left - elPosFrom.left;
-      const dTop = elPosTo.top - elPosFrom.top;
-      const distance = Math.sqrt(dLeft ** 2 + dTop ** 2);
-      const dLeftRel = dLeft / distance;
-      const dTopRel = dTop / distance;
-      const d = elFrom.offsetHeight / 2;
-      elPosFrom.top = elPosFrom.top + d * dTopRel;
-      elPosFrom.left = elPosFrom.left + d * dLeftRel;
-      // </сокращение длины линии на радиус круга, чтобы линия не перекрывала круг>
+    /**
+     * @type {CanvasRenderingContext2D}
+     */
+    this.context = this.canvasEl.getContext('2d');
 
-      context.lineWidth = 1;
-      context.strokeStyle = 'white';
-      context.beginPath();
-      context.moveTo(elPosFrom.left, elPosFrom.top);
-      context.lineTo(elPosTo.left, elPosTo.top);
-      context.stroke();
-    }
+    this.cbDraw = cbDraw;
+
+    /**
+     * @type {string[][]}
+     */
+    this.segments = segments;
+
+    /**
+     * ID интервалов анимации
+     * @type {string[]}
+     */
+    this.intervals = [];
+
+    const resizeObserver = new ResizeObserver(() => {
+      this.drawLines();
+    });
+    resizeObserver.observe(this.containerEl);
+  }
+  drawLines() {
+    this.clearIntervals();
+
+    this.canvasEl.width = this.containerEl.offsetWidth;
+    this.canvasEl.height = this.containerEl.offsetHeight;
+
+    this.segments.forEach((arr) => {
+      this.cbDraw(arr[0], arr[1]);
+    });
+  }
+  clearIntervals() {
+    this.intervals.forEach((id) => clearInterval(id));
   }
 }
 
+new DrawOnCanvas('.walls__canvas', drawLineOnWalls, [
+  ['.walls__point_1', '.walls__component_num_1 .component__mark'],
+  ['.walls__point_2', '.walls__component_num_1 .component__mark'],
+  ['.walls__point_3', '.walls__component_num_2 .component__mark'],
+]);
 /**
- * Получить позицию элемента относительно посредственного предка
- * @param {HTMLElement} targetEl Целевой элемент
- * @param {string} prop Свойство offsetTop || offsetLeft
- * @param {HTMLElement} containerEl Элемент относительно которого необходимо высчитать top и left
- * @returns {undefined | number}
+ * Рисует линию на канве, соединяющую компонент и описание компонента
+ * @param {string} selectorFrom
+ * @param {string} selectorTo
  */
-function getOffsetPosition(targetEl, prop, containerEl) {
-  if (!targetEl) return;
-  if (!targetEl.offsetParent || targetEl.offsetParent === containerEl)
-    return targetEl[prop];
-  return (
-    targetEl[prop] + getOffsetPosition(targetEl.offsetParent, prop, containerEl)
-  );
+function drawLineOnWalls(selectorFrom, selectorTo) {
+  const elFrom = document.querySelector(selectorFrom);
+  const elTo = document.querySelector(selectorTo);
+
+  let pointA = {
+    y: getOffsetTop(elFrom, this.containerEl) + elFrom.offsetHeight / 2,
+    x: getOffsetLeft(elFrom, this.containerEl) + elFrom.offsetWidth / 2,
+  };
+  let pointB = {
+    y: getOffsetTop(elTo, this.containerEl) + elTo.offsetHeight / 2,
+    x: getOffsetLeft(elTo, this.containerEl) + elTo.offsetWidth / 2,
+  };
+  // <сокращение длины линии на радиус круга, чтобы линия не перекрывала круг>
+  const d = elFrom.offsetHeight / 2;
+  pointA = { ...getPointAtDistanceInDirection(pointA, pointB, pointA, d) };
+  // </сокращение длины линии на радиус круга, чтобы линия не перекрывала круг>
+
+  this.context.lineWidth = 1;
+  this.context.strokeStyle = 'white';
+  this.context.beginPath();
+  this.context.moveTo(pointA.x, pointA.y);
+  this.context.lineTo(pointB.x, pointB.y);
+  this.context.stroke();
 }
 
+new DrawOnCanvas('.stages__canvas', drawDashedLineOnStage, [
+  [
+    '.stage:nth-child(1) .stage__wrap-icon',
+    '.stage:nth-child(2) .stage__wrap-icon',
+  ],
+  [
+    '.stage:nth-child(2) .stage__wrap-icon',
+    '.stage:nth-child(3) .stage__wrap-icon',
+  ],
+  [
+    '.stage:nth-child(3) .stage__wrap-icon',
+    '.stage:nth-child(4) .stage__wrap-icon',
+  ],
+]);
 /**
- * Получить offsetTop элемента относительно посредственного предка
- * @param {HTMLElement} targetEl
- * @param {HTMLElement} containerEl
- * @returns {undefined | number}
+ * Рисует линию на канве, соединяющую компонент и описание компонента
+ * @param {string} selectorFrom
+ * @param {string} selectorTo
  */
-function getOffsetTop(targetEl, containerEl) {
-  return getOffsetPosition(targetEl, 'offsetTop', containerEl);
-}
+function drawDashedLineOnStage(selectorFrom, selectorTo) {
+  const elFrom = document.querySelector(selectorFrom);
+  const elTo = document.querySelector(selectorTo);
 
-/**
- * Получить offsetTop элемента относительно посредственного предка
- * @param {HTMLElement} targetEl
- * @param {HTMLElement} containerEl
- * @returns {undefined | number}
- */
-function getOffsetLeft(targetEl, containerEl) {
-  return getOffsetPosition(targetEl, 'offsetLeft', containerEl);
+  // координаты центров 2 элементов
+  let pointA = {
+    y: getOffsetTop(elFrom, this.containerEl) + elFrom.offsetHeight / 2,
+    x: getOffsetLeft(elFrom, this.containerEl) + elFrom.offsetWidth / 2,
+  };
+  let pointB = {
+    y: getOffsetTop(elTo, this.containerEl) + elTo.offsetHeight / 2,
+    x: getOffsetLeft(elTo, this.containerEl) + elTo.offsetWidth / 2,
+  };
+  // <сокращение длины линии на радиус круга, чтобы линия не перекрывала круг>
+  if (window.innerWidth < 768) {
+    let r = elFrom.offsetHeight / 2 + (elFrom.offsetHeight * 10) / 167;
+    pointA = calculatePointOnCircle(pointA, r, -200);
+
+    r = elTo.offsetHeight / 2 + (elTo.offsetHeight * 10) / 167;
+    pointB = calculatePointOnCircle(pointB, r, -160);
+  } else {
+    let r = elFrom.offsetHeight / 2 + (elFrom.offsetHeight * 10) / 167;
+    pointA = getPointAtDistanceInDirection(pointA, pointB, pointA, r);
+    // pointA = calculatePointOnCircle(pointA, r, 0);
+
+    r = elTo.offsetHeight / 2 + (elTo.offsetHeight * 10) / 167;
+    pointB = getPointAtDistanceInDirection(pointA, pointB, pointB, -r);
+    // pointB = calculatePointOnCircle(pointB, r, -180);
+  }
+  // </сокращение длины линии на радиус круга, чтобы линия не перекрывала круг>
+
+  const h = window.innerWidth < 768 ? 50 : -31;
+  const pointC = getPointOnMidPerpendicular(pointA, pointB, h);
+
+  let offset = 0;
+
+  const draw = () => {
+    this.context.clearRect(
+      pointA.x - 50,
+      pointA.y - (window.innerWidth < 768 ? 50 : 100),
+      pointB.x + 50,
+      pointB.y + 50
+    );
+    this.context.strokeStyle = '#63AFCD';
+    this.context.lineWidth = 3;
+    this.context.setLineDash([3, 7]);
+    this.context.lineDashOffset = -offset;
+    this.context.beginPath();
+    this.context.moveTo(pointA.x, pointA.y);
+    this.context.quadraticCurveTo(pointC.x, pointC.y, pointB.x, pointB.y);
+    this.context.stroke();
+  };
+
+  const timerId = setInterval(() => {
+    offset++;
+    if (offset > 20) {
+      offset = 0;
+    }
+    draw();
+  }, 30);
+  this.intervals.push(timerId);
+  draw();
 }

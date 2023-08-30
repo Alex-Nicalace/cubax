@@ -1,37 +1,43 @@
 .component {
-   // .component__title
-   &__title {
-      margin-left: rem(-17);
-      @include adaptiveValue("font-size", 20, 15);
-      font-weight: 700;
-      line-height: rem(22);
-      display: flex;
-      align-items: center;
-      &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 18, 0);
-      }
-      @media (max-width: $tablet) {
-         margin-left: 0;
-         flex-direction: column;
-         align-items: flex-start;
-      }
-   }
-   &__mark {
-      margin-right: rem(17);
-      height: rem(5);
-      width: rem(5);
-      background-color: currentColor;
-      border-radius: 50%;
-      @media (max-width: $tablet) {
-         margin-bottom: rem(13);
-      }
-   }
-   // .component__descr
-   &__descr {
-      line-height: rem(22);
-      @media (max-width: $mobileSmall) {
-         font-size: rem(12);
-         line-height: rem(18);
-      }
-   }
+  // .component__title
+  &__title {
+    margin-left: rem(-17);
+    @include adaptiveValue('font-size', 20, 15);
+    font-weight: 700;
+    line-height: rem(22);
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 18, 0);
+    }
+
+    @media (max-width: $tablet) {
+      margin-left: 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__mark {
+    margin-right: rem(17);
+    height: rem(5);
+    width: rem(5);
+    background-color: currentColor;
+    border-radius: 50%;
+
+    @media (max-width: $tablet) {
+      margin-bottom: rem(13);
+    }
+  }
+
+  // .component__descr
+  &__descr {
+    line-height: rem(22);
+
+    @media (max-width: $mobileSmall) {
+      font-size: rem(12);
+      line-height: rem(18);
+    }
+  }
 }

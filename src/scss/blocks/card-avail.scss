@@ -1,11 +1,69 @@
 .card-avail {
+  @include adaptiveValue('padding-top', 50, 20, $containerWidth, 360, 1);
+  @include adaptiveValue('padding-bottom', 50, 20, $containerWidth, 360, 1);
+  @include adaptiveValue('padding-left', 45, 20, $containerWidth, 360, 1);
+  @include adaptiveValue('padding-right', 45, 20, $containerWidth, 360, 1);
+  @include adaptiveValue('border-radius', 30, 20);
+  background-color: $color-white;
+  display: grid;
+  // grid-template: auto 1fr / auto 1fr;
+  grid-template:
+    'i t' auto
+    'i d' 1fr / auto 1fr;
+  column-gap: rem(20);
+  align-items: start;
+
+  @media (max-width: $mobile) {
+    // grid-template-columns: auto;
+    grid-template:
+      'i' auto
+      't' auto
+      'd' 1fr;
+  }
+
   // .card-avail__icon
   &__icon {
+    grid-area: i;
+
+    @include adaptiveValue('width', 65, 24, $containerWidth, 360, 1);
+    height: auto;
+    aspect-ratio: 1/1;
+
+    fill: $color-steel-blue;
+
+    @media (max-width: $mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(10);
+      }
+    }
   }
+
   // .card-avail__title
   &__title {
+    grid-area: t;
+
+    font-weight: 750;
+    line-height: rem(22);
+
+    @media (max-width: $mobile) {
+      font-size: rem(12);
+      line-height: rem(18);
+    }
+
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 13, 6);
+    }
   }
+
   // .card-avail__descr
   &__descr {
+    grid-area: d;
+
+    line-height: rem(22);
+
+    @media (max-width: $mobile) {
+      font-size: rem(12);
+      line-height: rem(18);
+    }
   }
 }

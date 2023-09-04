@@ -1,61 +1,58 @@
 .techs {
-   position: relative;
-   overflow: hidden;
-   // .techs__background
-   &__background {
-      z-index: -1;
-   }
-   // .techs__cloud
-   &__cloud {
-      width: 130%;
-      z-index: -1;
-      animation: tech-cloud 16s ease-in-out infinite alternate;
-      @keyframes tech-cloud {
-         0% {
-            transform: translateX(-23%);
-         }
-         100% {
-            transform: translateX(0);
-         }
+  position: relative;
+  overflow: hidden;
+  // .techs__background
+  &__background {
+    z-index: -1;
+  }
+  // .techs__cloud
+  &__cloud {
+    @keyframes tech-cloud {
+      0% {
+        transform: translateX(-23%);
       }
-   }
-   // .techs_dark
-   &_dark {
-   }
-   // .techs__container
-   &__container {
-      @include adaptiveValue("padding-top", 182, 125);
-      @include adaptiveValue("padding-bottom", 95, 75);
-      position: relative;
-      z-index: 1;
-   }
-   // .techs__header
-   &__header {
-      text-align: center;
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+  // .techs_dark
+  &_dark {
+  }
+  // .techs__container
+  &__container {
+    @include adaptiveValue('padding-top', 182, 125);
+    @include adaptiveValue('padding-bottom', 95, 75);
+    position: relative;
+    z-index: 1;
+  }
+  // .techs__header
+  &__header {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: rem(70);
+    }
+  }
+  // .techs__body
+  &__body {
+    @media (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: rem(10);
+    }
+  }
+  // .techs__card
+  &__card {
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+    }
+    @media (min-width: $tablet) {
       &:not(:last-child) {
-         margin-bottom: rem(70);
+        margin-bottom: 0;
       }
-   }
-   // .techs__body
-   &__body {
-      @media (min-width: $tablet) {
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: space-between;
-         gap: rem(10);
-      }
-   }
-   // .techs__card
-   &__card {
-      &:not(:last-child) {
-         margin-bottom: rem(50);
-      }
-      @media (min-width: $tablet) {
-         &:not(:last-child) {
-            margin-bottom: 0;
-         }
-         max-width: percent(750, 1522);
-         flex: 0 0 percent(750, 1522);
-      }
-   }
+      max-width: percent(750, 1522);
+      flex: 0 0 percent(750, 1522);
+    }
+  }
 }

@@ -1,0 +1,86 @@
+.faq {
+  position: relative;
+  // .faq_dark
+  &_dark {
+  }
+  // .faq__background
+  &__background {
+  }
+  // .faq__cloud
+  &__cloud {
+  }
+  // .faq__container
+  &__container {
+    @include adaptiveValue('padding-top', 180, 120);
+    @include adaptiveValue('padding-bottom', 120, 100);
+
+    display: grid;
+    grid-template:
+      'h h'
+      'l b' / percent(1135, 1522) 1fr;
+    column-gap: rem(20);
+
+    @media (max-width: em(1120)) {
+      grid-template:
+        'h h'
+        'l b' / 1fr max-content;
+    }
+
+    @media (max-width: $mobile) {
+      grid-template:
+        'h'
+        'l'
+        'b';
+    }
+  }
+  // .faq__header
+  &__header {
+    grid-area: h;
+    text-align: center;
+
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 60, 40);
+    }
+  }
+  // .faq__list
+  &__list {
+    grid-area: l;
+  }
+  // .faq__item
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(33);
+    }
+  }
+  // .faq__button
+  &__button {
+    position: relative;
+
+    grid-area: b;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    @media (max-width: $mobile) {
+      aspect-ratio: 330/310;
+      justify-content: center;
+    }
+  }
+  // .faq__img-near-button
+  &__img-near-button {
+    position: absolute;
+    top: percent(-66, 618);
+    left: percent(-140, 367);
+    width: percent(716, 367);
+    // height: percent(800, 618);
+    aspect-ratio: 716/800;
+    z-index: -1;
+
+    @media (max-width: $mobile) {
+      width: percent(469, 330);
+      left: percent(-75, 330);
+      top: percent(-30, 310);
+    }
+  }
+}

@@ -18,4 +18,4 @@ Modal.openModalOnHashChange();
 import './walls.js';
 
 const spollers = new Spollers(document.querySelector('[data-spollers]'));
-spollers.items[0].open();
+spollers.items.length > 0 && spollers.items[0].open();

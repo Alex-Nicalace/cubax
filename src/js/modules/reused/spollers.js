@@ -23,6 +23,15 @@ class Spollers {
      * @private
      */
     this.el = el;
+
+    /**
+     * Массив объектов Accordion, представляющих Spollers.
+     * @type {Accordion[]}
+     */
+    this.items = [];
+
+    if (!(el instanceof HTMLElement)) return;
+
     /**
      * @type {HTMLDetailsElement[]}
      */
@@ -30,11 +39,6 @@ class Spollers {
       (item) =>
         item.tagName === 'DETAILS' && !item.hasAttribute('data-detail-init')
     );
-    /**
-     * Массив объектов Accordion, представляющих Spollers.
-     * @type {Accordion[]}
-     */
-    this.items = [];
 
     // Инициализация объектов Accordion для каждого <details> элемента.
     details.forEach((detail) => {

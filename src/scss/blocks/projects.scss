@@ -1,130 +1,105 @@
 .projects {
-   position: relative;
+  position: relative;
 
-   // .projects__background
-   &__background {}
+  // .projects__background
+  &__background {
+  }
 
-   // .projects__container
-   &__container {
-      @include adaptiveValue("padding-top", 200, 120);
-      @include adaptiveValue("padding-bottom", 115, 70);
+  // .projects__container
+  &__container {
+    @include adaptiveValue('padding-top', 200, 120);
+    @include adaptiveValue('padding-bottom', 115, 70);
 
-      text-align: center;
-   }
+    text-align: center;
+  }
 
-   // .projects__header
-   &__header {
-      &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 40, 30);
+  // .projects__header
+  &__header {
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 40, 30);
+    }
+  }
+
+  // .projects__descr
+  &__descr {
+    line-height: rem(28);
+
+    @media (max-width: $mobile) {
+      line-height: rem(24);
+    }
+
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 70, 50);
+    }
+  }
+
+  // .projects__slider
+  &__slider {
+    position: relative;
+
+    @include adaptiveValue('--size-shadow', 20, 10);
+
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 100, 45);
+    }
+  }
+
+  // .projects__wrapper-slider
+  &__wrapper-slider {
+  }
+
+  // .projects__slide
+  &__slide {
+    padding: rem(20);
+    padding-bottom: rem(50);
+    min-width: rem(290);
+
+    @media (min-width: $mobileSmall) {
+      flex: 0 0 percent(620, 1712.5);
+    }
+  }
+
+  // .projects__button-slide
+  &__button-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @include adaptiveValue('width', 75, 40);
+
+    // .projects__button-slide_prev
+    &.button-slide_prev {
+      left: var(--size-shadow);
+    }
+
+    // .projects__button-slide_next
+    &.projects__button-slide_next {
+      right: var(--size-shadow);
+    }
+  }
+
+  // .projects__text
+  &__text {
+    font-size: rem(26);
+    font-weight: 300;
+    line-height: rem(34);
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-bottom: rem(45);
+    }
+
+    @media (max-width: $mobileSmall) {
+      font-size: rem(20);
+    }
+  }
+
+  // .projects__button
+  &__button {
+    @media (max-width: $mobileSmall) {
+      .button {
+        max-width: rem(220);
+        padding: rem(11) rem(23);
       }
-   }
-
-   // .projects__descr
-   &__descr {
-      line-height: rem(28);
-
-      @media (max-width:$mobile) {
-         line-height: rem(24);
-      }
-
-      &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 70, 50);
-      }
-   }
-
-   // .projects__slider
-   &__slider {
-      position: relative;
-
-      @include adaptiveValue("--size-shadow", 20, 10);
-
-      &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 100, 45);
-      }
-   }
-
-   // .projects__wrapper-slider
-   &__wrapper-slider {}
-
-   // .projects__slide
-   &__slide {
-      padding: rem(20);
-      padding-bottom: rem(50);
-      min-width: rem(290);
-
-      @media (min-width:$mobileSmall) {
-         flex: 0 0 percent(620, 1712.5);
-      }
-   }
-
-   // .projects__button-slide
-   &__button-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      @include adaptiveValue("width", 75, 40);
-      aspect-ratio: 1/1;
-      background-color: $color-white;
-      border-radius: 50%;
-      box-shadow: 0 0 0px var(--size-shadow) rgba($color-white, 0.5);
-      z-index: 1;
-
-      svg {
-         width: percent(18, 75);
-         aspect-ratio: 1/1;
-         stroke: $color-blue-steel;
-      }
-
-      // .projects__button-slide_prev
-      &_prev {
-         left: var(--size-shadow);
-
-         svg {
-            transform: rotate(-90deg);
-         }
-      }
-
-      // .projects__button-slide_next
-      &_next {
-         right: var(--size-shadow);
-
-         svg {
-            transform: rotate(90deg);
-         }
-      }
-
-      &.swiper-button-disabled {
-         display: none;
-      }
-   }
-
-   // .projects__text
-   &__text {
-      font-size: rem(26);
-      font-weight: 300;
-      line-height: rem(34);
-      text-transform: uppercase;
-
-      &:not(:last-child) {
-         margin-bottom: rem(45);
-      }
-
-      @media (max-width:$mobileSmall) {
-         font-size: rem(20);
-      }
-   }
-
-   // .projects__button
-   &__button {
-      @media (max-width:$mobileSmall) {
-         .button {
-            max-width: rem(220);
-            padding: rem(11) rem(23);
-         }
-      }
-   }
+    }
+  }
 }

@@ -106,15 +106,17 @@ function initSliders() {
         },
       },
       navigation: {
-        nextEl: '.projects__button-slide_next',
-        prevEl: '.projects__button-slide_prev',
+        nextEl: '.projects__button-slide.button-slide_next',
+        prevEl: '.projects__button-slide.button-slide_prev',
       },
     });
     window.addEventListener('resize', setWidthSlider);
     setWidthSlider();
     function setWidthSlider() {
       const clientWidth = document.documentElement.clientWidth;
-      const buttonNext = document.querySelector('.projects__button-slide_next');
+      const buttonNext = document.querySelector(
+        '.projects__button-slide.button-slide_next'
+      );
       if (clientWidth <= 479.98) {
         projectSlider.style.width = '';
         buttonNext.style.right = '';
@@ -127,6 +129,32 @@ function initSliders() {
         getComputedStyle(buttonNext)?.boxShadow.match(/\d+(\.\d+)?(?=px$)/);
       buttonNext.style.right = offset + (sizeShadow && +sizeShadow[0]) + 'px';
     }
+  }
+
+  if (document.querySelector('.whom__wrap-list')) {
+    // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    new Swiper(document.querySelector('.whom__wrap-list'), {
+      // Указываем скласс нужного слайдера
+      modules: [Navigation, Lazy, Keyboard],
+      slidesPerView: 1,
+      spaceBetween: 20,
+      lazy: true,
+      // позволяет стрелками управлять слайдером
+      keyboard: true,
+      breakpoints: {
+        767.98: {
+          slidesPerView: 2,
+        },
+        991.98: {
+          slidesPerView: 4,
+        },
+      },
+      navigation: {
+        nextEl: '.whom__button-slide.button-slide_next',
+        prevEl: '.whom__button-slide.button-slide_prev',
+      },
+    });
   }
 }
 

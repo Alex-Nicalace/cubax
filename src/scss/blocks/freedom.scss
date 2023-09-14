@@ -1,0 +1,50 @@
+.freedom {
+  position: relative;
+  background: linear-gradient(
+    -10deg,
+    #161b22 9.98%,
+    #202e43 43.97%,
+    #1b283c 69.87%,
+    #0d1725 88.6%
+  );
+
+  &__cloud {
+    height: auto;
+    @include adaptiveValue('top', -374, 0);
+    z-index: 0;
+  }
+
+  &__img-left,
+  &__img-right {
+    position: absolute;
+  }
+
+  &__img-left {
+    width: percent(734, 1552);
+    aspect-ratio: 734/454;
+    top: percent(185, 934);
+    left: percent(40, 1552);
+  }
+
+  &__img-right {
+    width: percent(894, 1552);
+    aspect-ratio: 894/736;
+    top: percent(80, 934);
+    right: percent(20, 1552);
+  }
+
+  &__container {
+    position: relative;
+    @include adaptiveValue('padding-top', 20, 110);
+    @include adaptiveValue('padding-bottom', 245, 280);
+  }
+
+  // .freedom_dark
+  &_dark {
+  }
+  // .freedom__circle
+  &__circle {
+    margin: 0 auto;
+    text-align: center;
+  }
+}

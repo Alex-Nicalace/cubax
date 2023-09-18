@@ -1,126 +1,88 @@
 .month {
-   position: relative;
+  position: relative;
 
-   // .month__background
-   &__background {}
+  // .month__background
+  &__background {
+  }
 
-   // .month__container
-   &__container {
-      @include adaptiveValue("padding-top", 200, 120);
-      @include adaptiveValue("padding-bottom", 110, 100);
+  // .month__container
+  &__container {
+    @include adaptiveValue('padding-top', 200, 120);
+    @include adaptiveValue('padding-bottom', 110, 100);
 
-      text-align: center;
-   }
+    text-align: center;
+  }
 
-   // .month__header
-   &__header {
-      &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 15, 40);
+  // .month__header
+  &__header {
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 15, 40);
+    }
+  }
+
+  // .month__descr
+  &__descr {
+    line-height: rem(28);
+
+    @media (max-width: $mobileSmall) {
+      line-height: rem(24);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+    }
+  }
+
+  // .month__benefits
+  &__benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(25) rem(20);
+
+    @media (max-width: $mobile) {
+      row-gap: rem(20);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(70);
+
+      @media (max-width: $mobileSmall) {
+        margin-bottom: rem(65);
       }
-   }
+    }
+  }
 
-   // .month__descr
-   &__descr {
-      line-height: rem(28);
+  // .month__benefit
+  &__benefit {
+    // max-width: percent(749, 1522);
+    min-width: rem(290);
+    flex: 1 1 percent(364, 1522);
 
-      @media (max-width:$mobileSmall) {
-         line-height: rem(24);
+    &_big {
+      // max-width: percent(1133, 1522);
+      flex: 1 1 percent(749, 1522);
+    }
+  }
+
+  // .month__text
+  &__text {
+    color: #000;
+    font-size: rem(26);
+    font-weight: 300;
+    line-height: rem(34);
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 25, 60);
+    }
+  }
+
+  // .month__button
+  &__button {
+    @media (min-width: $mobileSmall) {
+      .button {
+        width: rem(306);
       }
-
-      &:not(:last-child) {
-         margin-bottom: rem(50);
-      }
-   }
-
-   // .month__benefits
-   &__benefits {
-      display: flex;
-      flex-wrap: wrap;
-      gap: rem(25) rem(20);
-
-      @media (max-width:$mobile) {
-         row-gap: rem(20);
-      }
-
-      &:not(:last-child) {
-         margin-bottom: rem(70);
-
-         @media (max-width:$mobileSmall) {
-            margin-bottom: rem(65);
-         }
-      }
-   }
-
-   // .month__benefit
-   &__benefit {
-      // max-width: percent(749, 1522);
-      min-width: rem(290);
-      flex: 1 1 percent(364, 1522);
-
-      &_big {
-         // max-width: percent(1133, 1522);
-         flex: 1 1 percent(749, 1522);
-      }
-   }
-
-   // .month__text
-   &__text {
-      color: #000;
-      font-size: rem(26);
-      font-weight: 300;
-      line-height: rem(34);
-      text-transform: uppercase;
-
-      &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 25, 60);
-      }
-   }
-
-   // .month__button
-   &__button {
-      @media (min-width: $mobileSmall) {
-         .button {
-            width: rem(306);
-         }
-      }
-   }
-}
-
-.card-benefit {
-   padding: rem(40) rem(50);
-   padding-right: rem(40);
-   border-radius: rem(30);
-   background: $color-white;
-   text-align: left;
-
-   @media (max-width:$pc) {
-      @include adaptiveValue("padding", 40, 25);
-   }
-
-   // .card-benefit__icon
-   &__icon {
-      fill: $color-steel-blue;
-
-      &:not(:last-child) {
-         margin-bottom: rem(20);
-
-         @media (max-width:$mobileSmall) {
-            margin-bottom: rem(15);
-         }
-      }
-   }
-
-   // .card-benefit__title
-   &__title {
-      font-weight: 450;
-      line-height: rem(22);
-      letter-spacing: rem(-0.7);
-
-      @media (max-width:$mobileSmall) {
-         font-size: rem(12);
-         line-height: rem(18);
-         letter-spacing: normal;
-      }
-
-   }
+    }
+  }
 }

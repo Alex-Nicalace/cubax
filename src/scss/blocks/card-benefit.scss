@@ -1,0 +1,38 @@
+.card-benefit {
+  padding: rem(40) rem(50);
+  padding-right: rem(40);
+  border-radius: rem(30);
+  background: $color-white;
+  text-align: left;
+
+  @media (max-width: $pc) {
+    @include adaptiveValue('padding', 40, 25);
+  }
+
+  // .card-benefit__icon
+  &__icon {
+    fill: $color-steel-blue;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+
+      @media (max-width: $mobileSmall) {
+        margin-bottom: rem(15);
+        height: rem(22);
+      }
+    }
+  }
+
+  // .card-benefit__title
+  &__title {
+    font-weight: 450;
+    line-height: rem(22);
+    letter-spacing: rem(-0.7);
+
+    @media (max-width: $mobileSmall) {
+      font-size: rem(12);
+      line-height: rem(18);
+      letter-spacing: normal;
+    }
+  }
+}

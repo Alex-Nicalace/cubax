@@ -1,0 +1,43 @@
+.ideal {
+  position: relative;
+  // .ideal__background
+  &__background {
+  }
+  // .ideal__container
+  &__container {
+    @include adaptiveValue('padding-top', 200, 120);
+    @include adaptiveValue('padding-bottom', 100, 80);
+  }
+  // .ideal__header
+  &__header {
+    text-align: center;
+
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 100, 50);
+    }
+  }
+  // .ideal__benefits
+  &__benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(20);
+
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 80, 50);
+    }
+  }
+  // .ideal__benefit
+  &__benefit {
+    min-width: rem(290);
+    flex: 1 1 percent(493, 1522);
+    // @include adaptiveValue('height', 200, 140, $containerWidth, 360, 1);
+  }
+  // .ideal__text
+  &__text {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 34px; /* 130.769% */
+    text-transform: uppercase;
+  }
+}

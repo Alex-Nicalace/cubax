@@ -1,5 +1,4 @@
 .body-circle {
-  // display: none;
   max-width: rem(534);
   width: percent(534, 669);
   min-width: rem(290);
@@ -13,11 +12,24 @@
   // padding-top: percent(75, 669);
   @include adaptiveValue('padding-top', 75, 0, $containerWidth, 600);
   @include adaptiveValue('padding-bottom', 125, 0, $containerWidth, 600);
+
   // .body-circle__title
   &__title {
   }
+
   // .body-circle__button
   &__button {
+  }
+
+  &__label {
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: rem(36); /* 180% */
+    letter-spacing: rem(0.8);
+
+    @media (max-width: $mobile) {
+      line-height: rem(32);
+    }
   }
 
   &_centered {

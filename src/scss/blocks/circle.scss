@@ -43,6 +43,7 @@
         0px 0px 0px var(--radius, 21px) rgba($color-white, 0.9);
     }
   }
+
   // .circle__wrap-bg
   &__wrap-bg {
     position: absolute;
@@ -56,14 +57,24 @@
     border-radius: inherit;
     overflow: hidden;
   }
+
   // .circle__body
   &__body {
     position: relative;
     height: 100%;
   }
+
   &_min-w_506 {
     .circle__dekor {
       min-width: rem(506);
+    }
+  }
+
+  &_dekor-opacity_03 {
+    .circle__dekor {
+      &::before {
+        background-color: rgba($color-white, 0.3);
+      }
     }
   }
 }

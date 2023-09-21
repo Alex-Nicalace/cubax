@@ -14,4 +14,42 @@
   // .private-owner__ideal
   &__ideal {
   }
+
+  &__reliability {
+  }
+
+  &__joy {
+    .body-circle {
+      @media (max-width: $tablet) {
+        padding: 0;
+        width: auto;
+      }
+      @media (max-width: $mobile) {
+        min-width: rem(300);
+        // min-height: rem(330);
+        height: auto;
+
+        & > * {
+          &:not(:last-child) {
+            margin-bottom: rem(50);
+          }
+        }
+      }
+      @media (max-width: em(360)) {
+        min-width: auto;
+
+        & > * {
+          &:not(:last-child) {
+            margin-bottom: rem(30);
+          }
+        }
+      }
+    }
+
+    .circle {
+      @media (max-width: em(360)) {
+        width: auto;
+      }
+    }
+  }
 }

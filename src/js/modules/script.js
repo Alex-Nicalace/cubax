@@ -3,6 +3,9 @@ import { mask } from './reused/mask-input-tel-new.js';
 import scrollToAnchor from './reused/scrollToAnchor.js';
 import Modal from './reused/modal.js';
 import Spollers from './reused/spollers.js';
+import { bindInputLabel } from './reused/bindInputLabel.js';
+
+bindInputLabel();
 
 const scrollWindow = new ScrollWindow();
 scrollWindow.toggleClassesHeader();

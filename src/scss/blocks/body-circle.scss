@@ -15,6 +15,18 @@
 
   // .body-circle__title
   &__title {
+    &:not(.title) {
+      margin-bottom: rem(20);
+      @include adaptiveValue('font-size', 26, 18, 767.98, 400, 1);
+      font-weight: 300;
+      line-height: rem(34);
+      letter-spacing: rem(1.04);
+      text-transform: uppercase;
+
+      strong {
+        font-weight: 700;
+      }
+    }
   }
 
   // .body-circle__button
@@ -32,6 +44,42 @@
     }
   }
 
+  // .body-circle__form
+  &__form {
+    max-width: rem(374);
+    margin: 0 auto;
+  }
+
+  // .body-circle__name
+  &__name {
+    margin-bottom: rem(13);
+  }
+
+  // .body-circle__tel
+  &__tel {
+  }
+
+  // .body-circle__consent
+  &__consent {
+    @include adaptiveValue('margin-top', 45, 10, 767.98, $minWidth, 1);
+    @include adaptiveValue('margin-bottom', 45, 10, 767.98, $minWidth, 1);
+
+    @media (max-width: $mobile) {
+      input[type='checkbox'] + label span:nth-child(2) {
+        line-height: 1;
+        letter-spacing: normal;
+        padding-top: rem(7);
+      }
+    }
+  }
+
+  // .body-circle__submit
+  &__submit {
+    button {
+      width: rem(221);
+    }
+  }
+
   &_centered {
     @include adaptiveValue('padding-top', 110, 0, $containerWidth, 600);
     @include adaptiveValue('padding-bottom', 90, 0, $containerWidth, 600);
@@ -44,6 +92,17 @@
   &_fs-smaller {
     .body-circle__title {
       @include adaptiveValue('font-size', 42, 22, $containerWidth, 800, 1);
+    }
+  }
+
+  &_static-padding {
+    @include adaptiveValue('padding-top', 145, 0, 767.98, 360, 1);
+    @include adaptiveValue('padding-bottom', 90, 0, 767.98, 360, 1);
+    text-align: center;
+    // min-height: rem(500);
+
+    @media (max-width: em(570)) {
+      width: auto;
     }
   }
 }

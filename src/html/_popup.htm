@@ -342,3 +342,68 @@
     </div>
   </div>
 </dialog>
+
+<dialog id="modal-request" class="modal modal__circle">
+  <div class="circle circle_outer-circle_none circle_fixed circle_min-w_600">
+    <div class="circle__dekor">
+      <div class="circle__wrap-img-dekor">
+        <img src="@img/modal-dialog/bg.png" loading="lazy" alt="grass" />
+        <img src="@img/modal-dialog/bg.png" loading="lazy" alt="grass" />
+      </div>
+      <div class="circle__wrap-bg"></div>
+      <button class="circle__icon-close" data-close>
+        <svg width="24" height="24">
+          <use xlink:href="@img/icons/sprite.svg#cross-stroke"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="circle__body">
+      <div class="body-circle body-circle_static-padding">
+        <div class="body-circle__title">
+          <strong>Оставьте заявку</strong> <br />
+          и наши менеджеры свяжутся с вами в ближайшее время
+        </div>
+        <form action="#" class="body-circle__form">
+          <div class="body-circle__name input-block">
+            <input
+              class="input-block__input"
+              type="text"
+              name="name"
+              placeholder="Ваше имя"
+              required
+            />
+            <svg class="input-block__icon" width="16" height="16">
+              <use xlink:href="@img/icons/sprite.svg#avatar"></use>
+            </svg>
+          </div>
+          <div class="body-circle__tel input-block">
+            <input
+              class="input-block__input"
+              type="tel"
+              name="tel"
+              placeholder="Контактный номер телефона"
+              required
+            />
+            <svg class="input-block__icon" width="16" height="16">
+              <use xlink:href="@img/icons/sprite.svg#phone"></use>
+            </svg>
+          </div>
+          <div class="body-circle__consent">
+            <input class="sr-only" type="checkbox" name="consent" required />
+            <label>
+              <span>
+                <svg class="" width="16" height="16">
+                  <use xlink:href="@img/icons/sprite.svg#check-mark"></use>
+                </svg>
+              </span>
+              <span>Даю согласие на обработку персональных данных</span>
+            </label>
+          </div>
+          <div class="body-circle__submit">
+            <button class="button">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</dialog>

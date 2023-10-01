@@ -1,105 +1,105 @@
 .header {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	z-index: 2;
-	@include adaptiveValue("padding-top", 46, 19);
-	transition: all 0.3s ease 0s;
-	// .header__container
-	&__container {
-		display: grid;
-		grid-template-columns: 1fr auto 1fr;
-		column-gap: rem(25);
-		align-items: center;
-		@media (max-width: $mobile) {
-			grid-template-columns: 1fr auto auto;
-			column-gap: rem(26);
-		}
-	}
-	// .header__logo
-	&__logo {
-		display: block;
-		aspect-ratio: 185 / 46;
-		justify-self: start;
-		position: relative;
-		z-index: 1;
-		@include adaptiveValue("width", 185, 156);
-		img {
-			height: 100%;
-			width: 100%;
-			object-fit: contain;
-		}
-	}
-	// .header__menu
-	&__menu {
-		@media (max-width: $mobile) {
-			grid-column: 3;
-		}
-	}
-	// .header__tel
-	&__tel {
-		justify-self: end;
-		@media (max-width: $mobile) {
-			grid-row: 1;
-			grid-column: 2;
-		}
-		@media (max-width: $tablet) {
-			.tel__number {
-				display: none;
-			}
-		}
-	}
-	&_scroll {
-		top: -100%;
-		&_up {
-			top: 0;
-		}
-	}
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  @include adaptiveValue('padding-top', 46, 19);
+  transition: all 0.3s ease 0s;
+  // .header__container
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    column-gap: rem(25);
+    align-items: center;
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr auto auto;
+      column-gap: rem(26);
+    }
+  }
+  // .header__logo
+  &__logo {
+    display: block;
+    aspect-ratio: 185 / 46;
+    justify-self: start;
+    position: relative;
+    z-index: 1;
+    @include adaptiveValue('width', 185, 156);
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  // .header__menu
+  &__menu {
+    @media (max-width: $mobile) {
+      grid-column: 3;
+    }
+  }
+  // .header__tel
+  &__tel {
+    justify-self: end;
+    @media (max-width: $mobile) {
+      grid-row: 1;
+      grid-column: 2;
+    }
+    @media (max-width: $tablet) {
+      .tel__number {
+        display: none;
+      }
+    }
+  }
+  &_scroll {
+    top: -100%;
+    &_up {
+      top: 0;
+    }
+  }
 
-	&_sombre {
-		.header__tel {
-			color: $color-white;
-		}
-	}
+  &_sombre {
+    .header__tel {
+      color: $color-white;
+    }
+  }
 }
 
 //Burger
 .icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: rem(32);
-		height: rem(22);
-		cursor: pointer;
-		z-index: 1;
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(5);
-			border-radius: rem(5);
-			background-color: $color-blue-steel;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		.menu-open & {
-			&::before {
-				top: calc(50% - rem(2.5));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(2.5));
-				transform: rotate(45deg);
-			}
-		}
-	}
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: rem(32);
+    height: rem(22);
+    cursor: pointer;
+    z-index: 1;
+    &::before,
+    &::after {
+      content: '';
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(5);
+      border-radius: rem(5);
+      background-color: $color-blue-steel;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    .menu-open & {
+      &::before {
+        top: calc(50% - rem(2.5));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(2.5));
+        transform: rotate(45deg);
+      }
+    }
+  }
 }

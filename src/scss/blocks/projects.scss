@@ -66,13 +66,11 @@
     transform: translateY(-50%);
     @include adaptiveValue('width', 75, 40);
 
-    // .projects__button-slide_prev
     &.button-slide_prev {
       left: var(--size-shadow);
     }
 
-    // .projects__button-slide_next
-    &.projects__button-slide_next {
+    &.button-slide_next {
       right: var(--size-shadow);
     }
   }

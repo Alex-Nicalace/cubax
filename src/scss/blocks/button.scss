@@ -1,31 +1,32 @@
 .button {
-   display: inline-block;
-   padding: rem(23) rem(39);
-   border-radius: rem(35);
-   color: $color-white;
-   background-color: $color-razzmatazz;
-   @extend %base-bold;
-   transition: all 0.3s ease 0s;
+  display: inline-block;
+  padding: rem(23) rem(39);
+  border-radius: rem(35);
+  color: $color-white;
+  background-color: $color-razzmatazz;
+  @extend %base-bold;
+  text-align: center;
+  transition: all 0.3s ease 0s;
 
-   &_outline {
-      background-color: transparent;
-      border: rem(1) solid $color-razzmatazz;
-      @media (any-hover: hover) {
-         &:hover {
-            background-color: $color-razzmatazz;
-         }
+  &_outline {
+    background-color: transparent;
+    border: rem(1) solid $color-razzmatazz;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $color-razzmatazz;
       }
-      @media (max-width: $mobile) {
-         font-size: rem(14);
-         padding: rem(13) rem(39);
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+      padding: rem(13) rem(39);
+    }
+  }
+  &_color_black {
+    color: $color-main;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-white;
       }
-   }
-   &_color_black {
-      color: $color-main;
-      @media (any-hover: hover) {
-         &:hover {
-            color: $color-white;
-         }
-      }
-   }
+    }
+  }
 }

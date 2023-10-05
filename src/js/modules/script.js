@@ -1,6 +1,6 @@
 import ScrollWindow from './reused/scrollWindow.js';
 import { mask } from './reused/mask-input-tel-new.js';
-import scrollToAnchor from './reused/scrollToAnchor.js';
+import ScrollToAnchor from './reused/scrollToAnchor.js';
 import Modal from './reused/modal.js';
 import Spollers from './reused/spollers.js';
 import { bindInputLabel } from './reused/bindInputLabel.js';
@@ -12,11 +12,13 @@ scrollWindow.toggleClassesHeader();
 
 mask('.input-block__input[type="tel"]', '+38 (___) ___-__-__');
 
-scrollToAnchor();
+ScrollToAnchor.scrollToAnchorOnURLChange();
+new ScrollToAnchor();
 
 import './toggleThemeHeader.js';
 
 Modal.openModalOnHashChange();
+new Modal('[data-modal]');
 
 import './walls.js';
 

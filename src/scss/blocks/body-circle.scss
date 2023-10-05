@@ -71,6 +71,11 @@
         padding-top: rem(7);
       }
     }
+
+    &_mb {
+      margin-top: 0;
+      margin-bottom: rem(40);
+    }
   }
 
   // .body-circle__submit
@@ -78,6 +83,12 @@
     button {
       width: rem(221);
     }
+  }
+
+  // .body-circle__question
+  &__question {
+    margin-top: rem(65);
+    margin-bottom: rem(25);
   }
 
   &_centered {

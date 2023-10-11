@@ -4,6 +4,7 @@ import ScrollToAnchor from './reused/scrollToAnchor.js';
 import Modal from './reused/modal.js';
 import Spollers from './reused/spollers.js';
 import { bindInputLabel } from './reused/bindInputLabel.js';
+import Form from './form.js';
 
 bindInputLabel();
 
@@ -24,3 +25,5 @@ import './walls.js';
 
 const spollers = new Spollers(document.querySelector('[data-spollers]'));
 spollers.items.length > 0 && spollers.items[0].open();
+
+new Form();
